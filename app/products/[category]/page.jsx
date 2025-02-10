@@ -129,7 +129,7 @@ const products = [
 ];
 
 
-export default function ProductPage({ params }: { params: { category: string } }) {
+export default function ProductPage({ params }) {
   const router = useRouter();
   const { category } = params;
 
