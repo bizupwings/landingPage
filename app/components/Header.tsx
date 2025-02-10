@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Facebook, Twitter, Linkedin, Instagram, X, Menu as MenuIcon, ChevronDown  } from "lucide-react"
 
 import {Typography, MenuItem, Menu } from "@mui/material";
