@@ -8,7 +8,7 @@ import type React from "react" // Added import for React
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "PSI Enterprises - A Battery Expert",
+  title: "Shangai Bizupwings",
   description: "Engineering & Technological Solution Provider with Guaranteed 100% Customer Satisfaction",
 }
 

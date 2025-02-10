@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link"
-import { Facebook, Twitter, Linkedin, Instagram, X, Menu as MenuIcon, ChevronDown  } from "lucide-react"
-
+import { X, Menu as MenuIcon, ChevronDown  } from "lucide-react"
+import Image from "next/image"
 import {Typography, MenuItem, Menu } from "@mui/material";
 import { useRouter } from "next/navigation";
 
@@ -38,35 +38,26 @@ export default function Header() {
   };
   return (
     <header className="w-full bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-      {/* Top Bar */}
       <div className="bg-gray-800 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex gap-4 text-sm">
             <span>📞 India: +91 9213258888</span>
             <span>📞 China: (021) 69902124</span>
           </div>
-          <div className="flex gap-4">
-            <Link href="https://facebook.com" aria-label="Facebook"><Facebook className="h-5 w-5 hover:text-gray-400" /></Link>
-            <Link href="https://twitter.com" aria-label="Twitter"><Twitter className="h-5 w-5 hover:text-gray-400" /></Link>
-            <Link href="https://instagram.com" aria-label="Instagram"><Instagram className="h-5 w-5 hover:text-gray-400" /></Link>
-            <Link href="https://linkedin.com" aria-label="LinkedIn"><Linkedin className="h-5 w-5 hover:text-gray-400" /></Link>
-          </div>
         </div>
       </div>
 
-      {/* Navbar */}
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
         <Link href="/">
           <div className="h-30 w-30 md:h-20 md:w-20 flex items-center">
-            {/* <Image 
+            <Image 
               src="/assets/logo.png" 
               alt="logo" 
               width={50}  
               height={50}
               className="object-contain" 
-            /> */}
-            <Typography variant="h5" sx={{ fontWeight: "bold", color: "inherit" }}>BizUpWings</Typography>
+            />
+            {/* <Typography variant="h5" sx={{ fontWeight: "bold", color: "inherit" }}>BizUpWings</Typography> */}
           </div>
         </Link>
 

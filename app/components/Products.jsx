@@ -1,5 +1,6 @@
 import Image from 'next/image';
-
+import Link from "next/link";
+import { Button } from '@/components/ui/button';
 const products = [
   {
     title: "General Purpose LED",
@@ -174,6 +175,11 @@ export default function Products({ filteredProducts = [], selfRender = false }) 
               )}
             </div>
           ))}
+        </div>
+        <div className='m-4 flex items-center justify-center'>
+          <Link href="/products/all">
+            <Button variant="default" size="lg">See All Products</Button>
+          </Link>
         </div>
       </div>
     </section>
