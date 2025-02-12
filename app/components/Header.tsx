@@ -41,7 +41,7 @@ export default function Header() {
       <div className="bg-gray-800 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex gap-4 text-sm">
-            <span>📞 India: +91 9213258888</span>
+            <span>📞 India: +91 8178484331</span>
             <span>📞 China: (021) 69902124</span>
           </div>
         </div>
