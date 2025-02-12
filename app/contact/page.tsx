@@ -54,7 +54,7 @@ export default function ContactUs() {
             <div>
               <h4 className="font-semibold">Call Us</h4>
               <p>China: (021) 69902124</p>
-              <p>Ind: +91 9213258888</p>
+              <p>Ind: +91 8178484331</p>
             </div>
           </div>
 
