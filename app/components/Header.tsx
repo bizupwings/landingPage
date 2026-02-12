@@ -18,7 +18,6 @@ const categories = [
   "Transformers",
   "Bare PCB",
   "Relays",
-  "Stepper Motor Counters",
   "Circuit Safety Devices",
 ];
 
