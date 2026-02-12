@@ -19,7 +19,6 @@ const categories = [
   "Bare PCB",
   "Relays",
   "Stepper Motor Counters",
-  "CFL",
   "Circuit Safety Devices",
 ];
 
