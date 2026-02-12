@@ -111,6 +111,7 @@ const products = [
     image:"motor.jpg",
   },
   {
+    
     title: "Circuit Safety Devices",
     category: "Circuit Safety Devices",
     specs: "Fuses (Auto/Glass/Ceramic/SMD), MOV",
