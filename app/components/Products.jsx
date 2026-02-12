@@ -111,12 +111,6 @@ const products = [
     image:"motor.jpg",
   },
   {
-    title: "CFL",
-    category: "CFL",
-    specs: "5W to 85W (OEM/CKD/SKD)",
-    image:"cfs.jpg",
-  },
-  {
     title: "Circuit Safety Devices",
     category: "Circuit Safety Devices",
     specs: "Fuses (Auto/Glass/Ceramic/SMD), MOV",
