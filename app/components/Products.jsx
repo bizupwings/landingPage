@@ -105,12 +105,6 @@ const products = [
     image:"relays.jpg",
   },
   {
-    title: "Stepper Motor Counters",
-    category: "Stepper Motor Counters",
-    specs: "5+1, 6+0, 6+1 Type",
-    image:"motor.jpg",
-  },
-  {
     
     title: "Circuit Safety Devices",
     category: "Circuit Safety Devices",
