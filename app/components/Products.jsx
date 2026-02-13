@@ -182,7 +182,6 @@ export default function Products({ filteredProducts = [], selfRender = false }) 
           </Link>
         </div>
       </div>
-      ))}
     </section>
   );
 }
