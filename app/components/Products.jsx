@@ -132,13 +132,18 @@ export default function Products({ filteredProducts = [], selfRender = false }) 
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts?.map((product, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-5 transition hover:shadow-xl">
+           <Link
+            key={product.title}
+            href={`/product/${encodeURIComponent(product.title)}`}
+            className="block"
+          >
+            <div className="bg-white rounded-lg shadow-lg p-5 transition hover:shadow-xl cursor-pointer">
               <div className="relative w-full h-48">
                 <Image
                   src={`/products/${product.image}`}
                   alt={product.title}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  style={{ objectFit: "contain" }}
                   className="rounded-t-lg"
                 />
               </div>
