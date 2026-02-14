@@ -191,4 +191,8 @@ export default function Products({ filteredProducts = [], selfRender = false }) 
     <Button variant="default" size="lg">See All Products</Button>
   </Link>
 </div>
-
+          
+</div>
+</section>
+);
+}
