@@ -172,9 +172,11 @@ export default function Products({ filteredProducts = [], selfRender = false }) 
                 </div>
               )}
 
-              {product?.applications && (
+            {product?.applications && (
                 <div className="mt-3">
-                  <h4 className="font-semibold text-sm text-gray-700">Applications:</h4>
+                  <h4 className="font-semibold text-sm text-gray-700">
+                    Applications:
+                  </h4>
                   <ul className="text-xs text-gray-600 list-disc ml-4 mt-1">
                     {product.applications.map((app, i) => (
                       <li key={i}>{app}</li>
@@ -183,14 +185,19 @@ export default function Products({ filteredProducts = [], selfRender = false }) 
                 </div>
               )}
             </div>
-          ))}
-        </div>
-        <div className='m-4 flex items-center justify-center'>
-          <Link href="/products/all">
-            <Button variant="default" size="lg">See All Products</Button>
           </Link>
-        </div>
+        ))}
       </div>
-    </section>
-  );
+
+      <div className="m-4 flex items-center justify-center">
+        <Link href="/products/all">
+          <Button variant="default" size="lg">
+            See All Products
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </section>
+);
 }
+
