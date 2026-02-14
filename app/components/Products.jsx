@@ -1,65 +1,51 @@
-// app/components/Products.jsx
+"use client";
 
-import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import Button from './Button';
+import React from 'react';
 
-// TypeScript interfaces
 interface Product {
-    title: string;
-    category: string;
-    specs: string;
-    colors: string[];
-    applications: string[];
-    imagePath: string;
+  id: number;
+  name: string;
+  price: number;
+  imageUrl: string;
 }
 
-interface ProductsProps {
-    products: Product[];
-}
+const products: Product[] = [
+  { id: 1, name: 'Product 1', price: 10, imageUrl: '/images/product1.jpg' },
+  { id: 2, name: 'Product 2', price: 20, imageUrl: '/images/product2.jpg' },
+  { id: 3, name: 'Product 3', price: 30, imageUrl: '/images/product3.jpg' },
+  { id: 4, name: 'Product 4', price: 40, imageUrl: '/images/product4.jpg' },
+  { id: 5, name: 'Product 5', price: 50, imageUrl: '/images/product5.jpg' },
+  { id: 6, name: 'Product 6', price: 60, imageUrl: '/images/product6.jpg' },
+  { id: 7, name: 'Product 7', price: 70, imageUrl: '/images/product7.jpg' },
+  { id: 8, name: 'Product 8', price: 80, imageUrl: '/images/product8.jpg' },
+  { id: 9, name: 'Product 9', price: 90, imageUrl: '/images/product9.jpg' },
+  { id: 10, name: 'Product 10', price: 100, imageUrl: '/images/product10.jpg' },
+  { id: 11, name: 'Product 11', price: 110, imageUrl: '/images/product11.jpg' },
+  { id: 12, name: 'Product 12', price: 120, imageUrl: '/images/product12.jpg' },
+  { id: 13, name: 'Product 13', price: 130, imageUrl: '/images/product13.jpg' },
+  { id: 14, name: 'Product 14', price: 140, imageUrl: '/images/product14.jpg' },
+  { id: 15, name: 'Product 15', price: 150, imageUrl: '/images/product15.jpg' },
+  { id: 16, name: 'Product 16', price: 160, imageUrl: '/images/product16.jpg' },
+];
 
-const Products: React.FC<ProductsProps> = ({ products }) => {
-    return (
-        <div>
-            <h1>Our Products</h1>
-            <div className="product-list">
-                {products.map((product, index) => (
-                    <div key={index} className="product-item">
-                        <Image src={product.imagePath} alt={product.title} style={{ fill: 'contain' }} />
-                        <h2>{product.title}</h2>
-                        <p>Category: {product.category}</p>
-                        <p>Specs: {product.specs}</p>
-                        <p>Colors: {product.colors.join(', ')}</p>
-                        <p>Applications: {product.applications.join(', ')}</p>
-                    </div>
-                ))}
-            </div>
-            <Link href='/products'>
-                <Button title='See All Products' />
-            </Link>
+const Products: React.FC = () => {
+  return (
+    <div className="products">
+      {products.map((product) => (
+        <div key={product.id} className="product">
+          <Image
+            src={product.imageUrl}
+            alt={product.name}
+            fill
+            className="object-contain"
+          />
+          <h2>{product.name}</h2>
+          <p>${product.price}</p>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default Products;
-
-// Complete products data
-const productsData: Product[] = [
-    { title: 'General Purpose LED', category: 'LEDs', specs: 'Standard 5mm, 10mm', colors: ['Red', 'Green', 'Blue', 'Yellow'], applications: ['Indicator lights', 'Displays'], imagePath: '/images/general-purpose-led.jpg' },
-    { title: 'High Bright LED', category: 'LEDs', specs: 'High intensity', colors: ['White', 'Blue'], applications: ['Outdoor lighting', 'Stage lighting'], imagePath: '/images/high-bright-led.jpg' },
-    { title: 'Power LED', category: 'LEDs', specs: 'High power output', colors: ['Cool White', 'Warm White'], applications: ['Lighting fixtures', 'Automotive'], imagePath: '/images/power-led.jpg' },
-    { title: 'Infra Red LEDs', category: 'LEDs', specs: '850nm wavelength', colors: ['Infrared'], applications: ['Remote controls', 'Surveillance'], imagePath: '/images/infra-red-leds.jpg' },
-    { title: 'Lithium Batteries', category: 'Batteries', specs: 'Lithium-ion', colors: ['Various'], applications: ['Electronics', 'Power tools'], imagePath: '/images/lithium-batteries.jpg' },
-    { title: 'Nickel Batteries', category: 'Batteries', specs: 'NiMH', colors: ['Various'], applications: ['Rechargeable devices', 'Toys'], imagePath: '/images/nickel-batteries.jpg' },
-    { title: 'Capacitors', category: 'Components', specs: 'Various capacitance', colors: ['Yellow', 'Blue'], applications: ['Power supply', 'Signal coupling'], imagePath: '/images/capacitors.jpg' },
-    { title: 'Resistors', category: 'Components', specs: '1kΩ, 10kΩ, etc.', colors: ['Brown', 'Black'], applications: ['Current limiting', 'Biasing'], imagePath: '/images/resistors.jpg' },
-    { title: 'LCD Displays', category: 'Displays', specs: '16x2', colors: ['Black', 'Blue'], applications: ['Data display', 'Embedded systems'], imagePath: '/images/lcd-displays.jpg' },
-    { title: 'LED Displays', category: 'Displays', specs: '7-segment', colors: ['Red', 'Green'], applications: ['Clocks', 'Counters'], imagePath: '/images/led-displays.jpg' },
-    { title: 'Shunt Resistors', category: 'Components', specs: '0.01Ω, 0.1Ω', colors: ['Metallic'], applications: ['Current measurement'], imagePath: '/images/shunt-resistors.jpg' },
-    { title: 'Crystals & Oscillators', category: 'Components', specs: '12MHz', colors: ['Clear'], applications: ['Timing circuits'], imagePath: '/images/crystals-oscillators.jpg' },
-    { title: 'Transformers', category: 'Components', specs: 'Step-down', colors: ['Metal'], applications: ['Power supply'], imagePath: '/images/transformers.jpg' },
-    { title: 'Bare PCB', category: 'Components', specs: '1.6mm thickness', colors: ['Green'], applications: ['Custom electronics'], imagePath: '/images/bare-pcb.jpg' },
-    { title: 'Relays', category: 'Components', specs: '12V', colors: ['Black'], applications: ['Switching circuits'], imagePath: '/images/relays.jpg' },
-    { title: 'Circuit Safety Devices', category: 'Components', specs: 'Fuses', colors: ['Transparent'], applications: ['Overcurrent protection'], imagePath: '/images/circuit-safety-devices.jpg' },
-];
