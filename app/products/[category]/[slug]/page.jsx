@@ -1,6 +1,7 @@
+import { products } from "@/app/data/products";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { products } from "@/app/components/Products";
+
 
 export default function ProductDetail({ params }) {
   const { category, slug } = params;
