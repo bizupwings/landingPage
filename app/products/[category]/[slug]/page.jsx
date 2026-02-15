@@ -21,52 +21,58 @@ export default function ProductDetail({ params }) {
           Home / Products / {category} / {product.title}
         </p>
 
-        <h1 className="text-3xl font-bold text-gray-800 mb-8">
-          {product.title}
-        </h1>
+       <div className="grid md:grid-cols-2 gap-10">
+  {/* 左侧：产品图片 */}
+  <div>
+    <Image
+      src={`/products/${product.image}`}
+      alt={product.title}
+      width={500}
+      height={400}
+      className="object-contain rounded-lg bg-white"
+    />
+  </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          <Image
-            src={`/products/${product.image}`}
-            alt={product.title}
-            width={500}
-            height={400}
-            className="object-contain"
-          />
+  {/* 右侧：产品信息 */}
+  <div>
+    <h1 className="text-3xl font-bold text-gray-800 mb-4">
+      {product.title}
+    </h1>
 
-          <div>
-            <p className="text-gray-600">{product.specs}</p>
+    {product.specs && (
+      <p className="text-gray-600 mb-4">
+        {product.specs}
+      </p>
+    )}
 
-            {product.colors && (
-              <div className="mt-6">
-                <h3 className="font-semibold">Colors</h3>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {product.colors.map((color) => (
-                    <span
-                      key={color}
-                      className="bg-gray-200 px-3 py-1 rounded text-sm"
-                    >
-                      {color}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {product.applications && (
-              <div className="mt-6">
-                <h3 className="font-semibold">Applications</h3>
-                <ul className="list-disc ml-5 mt-2 text-gray-600">
-                  {product.applications.map((app) => (
-                    <li key={app}>{app}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
+    {product.colors && (
+      <div className="mb-6">
+        <h3 className="font-semibold mb-2">Colors</h3>
+        <div className="flex flex-wrap gap-2">
+          {product.colors.map((color) => (
+            <span
+              key={color}
+              className="px-3 py-1 text-sm bg-gray-100 rounded-full"
+            >
+              {color}
+            </span>
+          ))}
         </div>
       </div>
-    </section>
-  );
-}
+    )}
 
+    {product.applications && (
+      <div>
+        <h3 className="font-semibold mb-2">Applications</h3>
+        <ul className="list-disc list-inside text-gray-600">
+          {product.applications.map((app) => (
+            <li key={app}>{app}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+</div>
+
+
+       
