@@ -145,7 +145,11 @@ export default function Products({ filteredProducts = [], selfRender = false }) 
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts?.map((product, index) => (
-           <Link key={index} href={`/products/${product.slug}`}>
+       <Link
+  key={index}
+  href={`/products/${product.category.toLowerCase()}/${product.slug}`}
+>
+
            <div className="bg-white rounded-lg shadow-lg p-5 transition hover:shadow-xl cursor-pointer">
 
               <div className="relative w-full h-48">
