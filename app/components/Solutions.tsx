@@ -54,7 +54,7 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-8 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Our Solutions</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
