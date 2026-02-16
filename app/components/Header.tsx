@@ -35,7 +35,7 @@ export default function Header() {
     router.push(`/products/${category}`);
   };
   return (
-    <header className="w-full bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <header className="w-full bg-white shadow-md sticky top-0 z-50">
       <div className="bg-gray-800 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex gap-4 text-sm">
