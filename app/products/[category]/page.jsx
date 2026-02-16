@@ -19,7 +19,7 @@ export default function CategoryPage({ params }) {
           {filteredProducts.map((product) => (
             <Link
               key={product.slug}
-              href={`/products/${category.toLowerCase()}/${product.slug}`}
+             href={`/products/${product.categorySlug}/${product.slug}`}
             >
               <div className="bg-white rounded-lg shadow p-4 hover:shadow-lg cursor-pointer">
                 <h2 className="font-semibold">{product.title}</h2>
