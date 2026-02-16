@@ -84,11 +84,38 @@ export const products = [
     image: "shard.jpg",
   },
   {
-    title: "Crystals & Oscillators",
-    slug: "crystals-oscillators",
-    category: "Crystals & Frequency Devices",
-    specs: "HC49U, HC49S, SMD Tuning Fork, Resonators",
-    image: "quartz.jpg",
+ {
+  title: "Crystals & Oscillators",
+  slug: "crystals-oscillators",
+  category: "Crystals & Frequency Devices",
+  specs: "HC49U, HC49S, SMD Tuning Fork, Resonators",
+  image: "quartz.jpg",
+
+  description:
+    "High precision quartz crystals for frequency control applications in industrial and consumer electronics.",
+
+  features: [
+    "Wide frequency range",
+    "Low ESR",
+    "High stability",
+    "Custom specifications available"
+  ],
+
+  technicalSpecs: [
+    { label: "Frequency Range", value: "8–50 MHz" },
+    { label: "Load Capacitance", value: "18pF" },
+    { label: "Tolerance", value: "±20ppm" },
+    { label: "Operating Temp", value: "-40°C to +85°C" }
+  ],
+
+  datasheetImages: [
+    "/products/crystal/page1.jpg",
+    "/products/crystal/page2.jpg"
+  ],
+
+  datasheetPdf: "/pdf/crystal.pdf"
+}
+
   },
   {
     title: "Transformers",
