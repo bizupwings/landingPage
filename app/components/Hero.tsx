@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className="relative h-[500px] flex items-center overflow-hidden">
+    <section className="relative h-[450px] flex items-center overflow-hidden">
       {/* Background Slider */}
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 w-full h-full animate-slideShow">
