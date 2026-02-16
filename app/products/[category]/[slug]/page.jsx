@@ -3,73 +3,84 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 export default function ProductDetail({ params }) {
-  const { category, slug } = params;
+  const { category: categorySlug, slug } = params;
 
   const product = products.find(
-    (p) =>
-      p.slug === slug &&
-      p.categorySlug === category
-    );
+    (p) => p.slug === slug && p.categorySlug === categorySlug
+  );
 
   if (!product) return notFound();
 
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
-        {/* Breadcrumb */}
         <p className="text-sm text-gray-500 mb-4">
-          Home / Products / {category} / {product.title}
+          Home / Products / {product.category} / {product.title}
         </p>
 
-        {/* Main content */}
         <div className="grid md:grid-cols-2 gap-10">
-          {/* Left: Image */}
-          <div className="bg-white rounded-lg flex items-center justify-center">
+          <div>
             <Image
               src={`/products/${product.image}`}
               alt={product.title}
               width={500}
               height={400}
-              className="object-contain"
+              className="object-contain rounded-lg bg-white"
             />
           </div>
 
-          {/* Right: Info */}
           <div>
             <h1 className="text-3xl font-bold text-gray-800 mb-4">
               {product.title}
             </h1>
 
-            {product.specs && (
-              <p className="text-gray-600 mb-6">
-                {product.specs}
-              </p>
+            {product.description && (
+              <p className="text-gray-700 mb-4">{product.description}</p>
             )}
 
-            {product.colors && (
+            {product.specs && (
+              <p className="text-gray-600 mb-4">{product.specs}</p>
+            )}
+
+            {product.features && product.features.length > 0 && (
               <div className="mb-6">
-                <h3 className="font-semibold mb-2">Colors</h3>
-                <div className="flex flex-wrap gap-2">
-                  {product.colors.map((color) => (
-                    <span
-                      key={color}
-                      className="px-3 py-1 text-sm bg-gray-100 rounded-full"
-                    >
-                      {color}
-                    </span>
+                <h3 className="font-semibold mb-2">Features</h3>
+                <ul className="list-disc list-inside text-gray-600">
+                  {product.features.map((f) => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {product.datasheetImages && product.datasheetImages.length > 0 && (
+              <div className="mt-8">
+                <h3 className="font-semibold mb-3">Datasheet Images</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {product.datasheetImages.map((src) => (
+                    <Image
+                      key={src}
+                      src={src}
+                      alt="datasheet"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto rounded bg-white"
+                    />
                   ))}
                 </div>
               </div>
             )}
 
-            {product.applications && (
-              <div>
-                <h3 className="font-semibold mb-2">Applications</h3>
-                <ul className="list-disc list-inside text-gray-600">
-                  {product.applications.map((app) => (
-                    <li key={app}>{app}</li>
-                  ))}
-                </ul>
+            {product.datasheetPdf && (
+              <div className="mt-6">
+                <a
+                  href={product.datasheetPdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-600 underline"
+                >
+                  Download Datasheet (PDF)
+                </a>
               </div>
             )}
           </div>
@@ -78,6 +89,5 @@ export default function ProductDetail({ params }) {
     </section>
   );
 }
-
 
        
