@@ -3,6 +3,7 @@ export const products = [
     title: "General Purpose LED",
     slug: "general-purpose-led",
     category: "LED",
+    categorySlug: "led",
     specs: "3mm, 5mm Diffused/Transparent LED",
     colors: ["Red", "Green", "Yellow", "Amber", "Blue", "White"],
     applications: ["UPS", "Inverter", "Stabilisers", "Telecom", "Power Supply"],
@@ -12,6 +13,7 @@ export const products = [
     title: "High Bright LED",
     slug: "high-bright-led",
     category: "LED",
+    categorySlug: "led",
     specs: "3mm, 5mm, 8mm, 10mm High bright LED (4000mcd to 20,000mcd)",
     colors: ["Red", "Green", "Yellow", "Amber", "Blue", "White"],
     applications: ["Traffic Signals", "Railway Signals", "Indoor & Outdoor Lighting"],
@@ -21,6 +23,7 @@ export const products = [
     title: "Power LED",
     slug: "power-led",
     category: "LED",
+    categorySlug: "led",
     specs: "Star type, Chip type, High bright LED (0.5W to 30W)",
     colors: ["Warm White", "Cool White", "Milky White"],
     applications: ["Decoration", "Home/Commercial Lighting", "Street Lighting"],
@@ -30,6 +33,7 @@ export const products = [
     title: "Infra Red and Other LEDs",
     slug: "infra-red-and-other-leds",
     category: "LED",
+    categorySlug: "led",
     specs: "Round IR LED, Moulded IR Modules, PLCC/SMD LEDs",
     applications: ["Remote Control Systems", "TV", "Energy Meters"],
     image: "ir_led.jpg",
@@ -38,6 +42,7 @@ export const products = [
     title: "Lithium Batteries",
     slug: "lithium-batteries",
     category: "Batteries",
+    categorySlug: "batteries",
     specs: "Li/SOCI2, Li/MnO2, Li-ion, Li-Polymer (25mAh to 10,000mAh)",
     image: "li-battery.jpeg",
   },
@@ -45,6 +50,7 @@ export const products = [
     title: "Nickel Batteries",
     slug: "nickel-batteries",
     category: "Batteries",
+    categorySlug: "batteries",
     specs: "Ni-Mh, Ni-Cd Batteries (25mAh to 50,000mAh)",
     image: "ni_battery.jpg",
   },
@@ -52,6 +58,7 @@ export const products = [
     title: "Capacitors",
     slug: "capacitors",
     category: "Capacitors",
+    categorySlug: "capacitors",
     specs: "Aluminium Electrolytic, Ceramic, Tantalum, SMD",
     image: "capacitor.jpg",
   },
@@ -59,6 +66,7 @@ export const products = [
     title: "Resistors",
     slug: "resistors",
     category: "Resistors",
+    categorySlug: "resistors",
     specs: "CFR, MFR, Wire Wound, SMD, Fusible",
     image: "resistor.jpg",
   },
@@ -66,6 +74,7 @@ export const products = [
     title: "LCD Displays",
     slug: "lcd-displays",
     category: "Liquid Crystal Display (LCD)",
+    categorySlug: "liquid-crystal-display-lcd",
     specs: "Alpha Numeric, Seven Segment, Graphics LCD",
     image: "lcd.jpg",
   },
@@ -73,6 +82,7 @@ export const products = [
     title: "LED Displays",
     slug: "led-displays",
     category: "LED Display",
+    categorySlug: "led-display",
     specs: "Seven Segment (0.30\" to 8\")",
     image: "led.png",
   },
@@ -80,47 +90,42 @@ export const products = [
     title: "Shunt Resistors",
     slug: "shunt-resistors",
     category: "Shunt Resistance",
+    categorySlug: "shunt-resistance",
     specs: "Custom Material for Energy Meters",
     image: "shard.jpg",
   },
   {
- {
-  title: "Crystals & Oscillators",
-  slug: "crystals-oscillators",
-  category: "Crystals & Frequency Devices",
-  specs: "HC49U, HC49S, SMD Tuning Fork, Resonators",
-  image: "quartz.jpg",
-
-  description:
-    "High precision quartz crystals for frequency control applications in industrial and consumer electronics.",
-
-  features: [
-    "Wide frequency range",
-    "Low ESR",
-    "High stability",
-    "Custom specifications available"
-  ],
-
-  technicalSpecs: [
-    { label: "Frequency Range", value: "8–50 MHz" },
-    { label: "Load Capacitance", value: "18pF" },
-    { label: "Tolerance", value: "±20ppm" },
-    { label: "Operating Temp", value: "-40°C to +85°C" }
-  ],
-
-  datasheetImages: [
-    "/products/crystal/page1.jpg",
-    "/products/crystal/page2.jpg"
-  ],
-
-  datasheetPdf: "/pdf/crystal.pdf"
-}
-
+    title: "Crystals & Oscillators",
+    slug: "crystals-oscillators",
+    category: "Crystals & Frequency Devices",
+    categorySlug: "crystals-frequency-devices",
+    specs: "HC49U, HC49S, SMD Tuning Fork, Resonators",
+    image: "quartz.jpg",
+    description:
+      "High precision quartz crystals for frequency control applications in industrial and consumer electronics.",
+    features: [
+      "Wide frequency range",
+      "Low ESR",
+      "High stability",
+      "Custom specifications available"
+    ],
+    technicalSpecs: [
+      { label: "Frequency Range", value: "8–50 MHz" },
+      { label: "Load Capacitance", value: "18pF" },
+      { label: "Tolerance", value: "±20ppm" },
+      { label: "Operating Temp", value: "-40°C to +85°C" }
+    ],
+    datasheetImages: [
+      "/products/crystal/page1.jpg",
+      "/products/crystal/page2.jpg"
+    ],
+    datasheetPdf: "/pdf/crystal.pdf"
   },
   {
     title: "Transformers",
     slug: "transformers",
     category: "Transformers",
+    categorySlug: "transformers",
     specs: "Current, Potential, Power Transformers",
     image: "transformer.jpg",
   },
@@ -128,6 +133,7 @@ export const products = [
     title: "Bare PCB",
     slug: "bare-pcb",
     category: "Bare PCB",
+    categorySlug: "bare-pcb",
     specs: "2 to 14 Layers (Single/Double Side)",
     image: "pcb.jpg",
   },
@@ -135,6 +141,7 @@ export const products = [
     title: "Relays",
     slug: "relays",
     category: "Relays",
+    categorySlug: "relays",
     specs: "Telecom, Automotive, Reed Relays",
     image: "relays.jpg",
   },
@@ -142,8 +149,8 @@ export const products = [
     title: "Circuit Safety Devices",
     slug: "circuit-safety-devices",
     category: "Circuit Safety Devices",
+    categorySlug: "circuit-safety-devices",
     specs: "Fuses (Auto/Glass/Ceramic/SMD), MOV",
     image: "fuse.jpg",
   },
 ];
-
