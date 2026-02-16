@@ -8,8 +8,8 @@ export default function ProductDetail({ params }) {
   const product = products.find(
     (p) =>
       p.slug === slug &&
-      p.category.toLowerCase() === category.toLowerCase()
-  );
+      p.categorySlug === category
+    );
 
   if (!product) return notFound();
 
