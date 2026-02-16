@@ -10,7 +10,7 @@ export default function Products({ filteredProducts = [], selfRender = false }) 
     : filteredProducts;
 
   return (
-    <section className=" py-1 bg-red-100">
+   <section className="py-2 bg-red-500">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
           Products Center
