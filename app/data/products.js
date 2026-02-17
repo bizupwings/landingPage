@@ -100,7 +100,7 @@ export const products = [
   category: "Crystals & Frequency Devices",
   categorySlug: "crystals-frequency-devices",
 
-  specs: "HC49U, HC49S, SMD Tuning Fork, Resonators",
+  
   image: "quartz.jpg",
 
   description:
