@@ -95,7 +95,6 @@ export const products = [
     image: "shard.jpg",
   },
   {
-   {
   title: "Crystals & Oscillators",
   slug: "crystals-oscillators",
   category: "Crystals & Frequency Devices",
