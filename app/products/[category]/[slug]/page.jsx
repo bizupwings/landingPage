@@ -71,18 +71,30 @@ export default function ProductDetail({ params }) {
               </div>
             )}
 
-            {product.datasheetPdf && (
-              <div className="mt-6">
-                <a
-                  href={product.datasheetPdf}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-600 underline"
-                >
-                  Download Datasheet (PDF)
-                </a>
-              </div>
-            )}
+           {product.datasheetPdf && (
+  <div className="mt-10">
+    <h3 className="font-semibold mb-4">Datasheet</h3>
+
+    {/* 下载按钮 */}
+    <a
+      href={product.datasheetPdf}
+      target="_blank"
+      rel="noreferrer"
+      className="inline-block mb-6 text-blue-600 underline"
+    >
+      Download Datasheet (PDF)
+    </a>
+
+    {/* PDF 预览 */}
+    <div className="border rounded-lg overflow-hidden">
+      <iframe
+        src={product.datasheetPdf}
+        className="w-full h-[700px]"
+      />
+    </div>
+  </div>
+)}
+
           </div>
         </div>
       </div>
