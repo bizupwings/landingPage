@@ -120,9 +120,7 @@ export const products = [
     { label: "Operating Temp", value: "-40°C to +85°C" }
   ],
 
-  datasheetPdf: "/pdf/crystal_sjk.pdf"
-}
-
+  datasheetPdf: "/pdf/crystal_sjk.pdf",
   },
   {
     title: "Transformers",
