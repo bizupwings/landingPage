@@ -63,12 +63,34 @@ export const products = [
     image: "capacitor.jpg",
   },
   {
-    title: "Resistors",
-    slug: "resistors",
-    category: "Resistors",
-    categorySlug: "resistors",
-    specs: "CFR, MFR, Wire Wound, SMD, Fusible",
-    image: "resistor.jpg",
+  title: "Resistors",
+  slug: "resistors",
+  category: "Resistors",
+  categorySlug: "resistors",
+  specs: "CFR, MFR, Wire Wound, SMD, Fusible",
+  image: "resistor.jpg",
+
+  description:
+    "Comprehensive range of chip and DIP resistors including thick film, thin film, metal film, wire wound and automotive grade resistors.",
+
+  features: [
+    "Thick Film Chip Resistors (RCT / ACR / RCA)",
+    "Anti-Sulfur Chip Resistors (AS / AAS)",
+    "Thin Film Precision Resistors (AR / AAR)",
+    "Current Sensing Resistors (CS / ACS)",
+    "High Voltage & Surge Withstanding Resistors",
+    "Wire Wound & Cement Resistors"
+  ],
+
+  technicalSpecs: [
+    { label: "Standards", value: "RoHS & REACH compliant" },
+    { label: "Automotive", value: "AEC-Q200 available" },
+    { label: "Certifications", value: "ISO 9001 / 14001 / 45001 / IATF 16949" }
+  ],
+
+  datasheetPdf: "/pdf/resistor_hkr.pdf"
+
+
   },
   {
     title: "LCD Displays",
