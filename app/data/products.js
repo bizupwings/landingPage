@@ -139,7 +139,6 @@ export const products = [
     image: "pcb.jpg",
   },
   {
-{
   title: "Relays",
   slug: "relays",
   category: "Relays",
