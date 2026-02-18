@@ -139,12 +139,35 @@ export const products = [
     image: "pcb.jpg",
   },
   {
-    title: "Relays",
-    slug: "relays",
-    category: "Relays",
-    categorySlug: "relays",
-    specs: "Telecom, Automotive, Reed Relays",
-    image: "relays.jpg",
+{
+  title: "Relays",
+  slug: "relays",
+  category: "Relays",
+  categorySlug: "relays",
+  specs: "Telecom, Automotive, Reed Relays",
+  image: "relays.jpg",
+
+  description:
+    "Magnetic latching relays (SH31A / SH31E series) with low power consumption and high switching capability.",
+
+  features: [
+    "Dual coil available",
+    "Low power consumption",
+    "Switch capability up to 120A",
+    "Short-circuit current capability up to 6000A",
+    "RoHS compliant"
+  ],
+
+  technicalSpecs: [
+    { label: "Contact material", value: "Silver alloy" },
+    { label: "Max switching current", value: "60A / 90A / 120A" },
+    { label: "Max switching voltage", value: "250VAC" },
+    { label: "Dielectric strength", value: "4000VAC (1 min)" },
+    { label: "Ambient temperature", value: "-40°C to +70°C" }
+  ],
+
+  datasheetPdf: "/pdf/latch_relay.pdf"
+
   },
   {
     title: "Circuit Safety Devices",
