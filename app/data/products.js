@@ -108,13 +108,32 @@ export const products = [
     specs: "Seven Segment (0.30\" to 8\")",
     image: "led.png",
   },
-  {
-    title: "Shunt Resistors",
-    slug: "shunt-resistors",
-    category: "Shunt Resistance",
-    categorySlug: "shunt-resistance",
-    specs: "Custom Material for Energy Meters",
-    image: "shard.jpg",
+ {
+  title: "Shunt Resistors",
+  slug: "shunt-resistors",
+  category: "Shunt Resistance",
+  categorySlug: "shunt-resistance",
+  specs: "Custom Manganin / Copper Shunt for Energy Meters",
+  image: "shard.jpg",
+
+  description:
+    "High precision manganin shunt resistors designed for energy meters, current sensing and power measurement applications.",
+
+  features: [
+    "High current capability",
+    "Low temperature coefficient",
+    "Stable resistance value",
+    "Custom dimensions available"
+  ],
+
+  datasheetImages: [
+    "/products/shunt/shunt1.jpg",
+    "/products/shunt/shunt2.jpg",
+    "/products/shunt/shunt3.jpg",
+    "/products/shunt/shunt4.jpg",
+    "/products/shunt/shunt5.jpg",
+    "/products/shunt/shunt6.jpg"
+  ]
   },
   {
   title: "Crystals & Oscillators",
