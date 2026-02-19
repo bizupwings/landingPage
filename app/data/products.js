@@ -54,13 +54,101 @@ export const products = [
     specs: "Ni-Mh, Ni-Cd Batteries (25mAh to 50,000mAh)",
     image: "ni_battery.jpg",
   },
-  {
-    title: "Capacitors",
-    slug: "capacitors",
-    category: "Capacitors",
-    categorySlug: "capacitors",
-    specs: "Aluminium Electrolytic, Ceramic, Tantalum, SMD",
-    image: "capacitor.jpg",
+ {
+  title: "AL Capacitor (Electrolytic)",
+  slug: "al-capacitor",
+  category: "Capacitors",
+  categorySlug: "capacitors",
+  description: "Aluminium electrolytic capacitors for industrial and general applications.",
+  specs: "Radial / Snap-in / Screw Terminal types available",
+  features: [
+    "High ripple current",
+    "Long lifetime",
+    "Wide voltage range",
+    "Industrial grade quality"
+  ],
+  image: "capacitor.jpg"
+},
+
+{
+  title: "SMD Aluminum Capacitor",
+  slug: "smd-aluminum",
+  category: "Capacitors",
+  categorySlug: "capacitors",
+  description: "Surface mount aluminum capacitors for compact PCB designs.",
+  specs: "Low ESR / High reliability",
+  features: [
+    "Compact size",
+    "Low impedance",
+    "RoHS compliant",
+    "Stable performance"
+  ],
+  image: "capacitor.jpg"
+},
+
+{
+  title: "Tantalum Capacitor",
+  slug: "tantalum",
+  category: "Capacitors",
+  categorySlug: "capacitors",
+  description: "Tantalum capacitors suitable for precision electronics.",
+  specs: "SMD / Radial types",
+  features: [
+    "High stability",
+    "Small size",
+    "Long operational life",
+    "Automotive grade optional"
+  ],
+  image: "capacitor.jpg"
+},
+
+{
+  title: "Ceramic Disc Capacitor",
+  slug: "ceramic-disc",
+  category: "Capacitors",
+  categorySlug: "capacitors",
+  description: "Ceramic disc capacitors for general electronic applications.",
+  specs: "High voltage / Safety certified types",
+  features: [
+    "High insulation resistance",
+    "Compact size",
+    "Wide capacitance range",
+    "Reliable performance"
+  ],
+  image: "capacitor.jpg"
+},
+
+{
+  title: "Film Capacitor",
+  slug: "film-capacitor",
+  category: "Capacitors",
+  categorySlug: "capacitors",
+  description: "Polypropylene and polyester film capacitors.",
+  specs: "X2 safety certified / Power film types",
+  features: [
+    "Low loss",
+    "High reliability",
+    "Stable capacitance",
+    "Long service life"
+  ],
+  image: "capacitor.jpg"
+},
+
+{
+  title: "Super Capacitor",
+  slug: "super-cap",
+  category: "Capacitors",
+  categorySlug: "capacitors",
+  description: "Super capacitors for energy storage and backup power.",
+  specs: "High capacitance / Low ESR",
+  features: [
+    "High energy density",
+    "Fast charge-discharge",
+    "Long cycle life",
+    "Maintenance free"
+  ],
+  image: "capacitor.jpg"
+
   },
   {
   title: "Resistors",
