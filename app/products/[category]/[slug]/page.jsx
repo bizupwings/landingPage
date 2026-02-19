@@ -3,6 +3,7 @@ import { useState } from "react";
 import { products } from "@/app/data/products";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ImageCarousel from "@/app/components/ImageCarousel";
 
 export default function ProductDetail({ params }) {
   const { category: categorySlug, slug } = params;
@@ -26,7 +27,7 @@ export default function ProductDetail({ params }) {
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
           {/* Product Image */}
-       <div>
+<div>
   {product.datasheetImages && product.datasheetImages.length > 0 ? (
     <ImageCarousel images={product.datasheetImages} />
   ) : (
@@ -39,6 +40,7 @@ export default function ProductDetail({ params }) {
     />
   )}
 </div>
+
 
 
           {/* Product Info */}
