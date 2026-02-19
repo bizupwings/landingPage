@@ -103,36 +103,69 @@ export const products = [
 },
 
 {
-  title: "Ceramic Disc Capacitor",
-  slug: "ceramic-disc",
+
+  title: "Ceramic Disc Capacitors - HVCAP",
+  slug: "ceramic-disc-hvcap",
   category: "Capacitors",
   categorySlug: "capacitors",
-  description: "Ceramic disc capacitors for general electronic applications.",
-  specs: "High voltage / Safety certified types",
+
+  specs: "High Voltage Ceramic Capacitors",
+
+  description:
+    "HVCAP ceramic disc capacitors designed for high voltage applications including power supply, lighting and industrial equipment.",
+
+  image: "capacitor.jpg",
+
   features: [
-    "High insulation resistance",
-    "Compact size",
-    "Wide capacitance range",
-    "Reliable performance"
+    "High voltage rating",
+    "Low loss",
+    "Stable performance",
+    "RoHS compliant"
   ],
-  image: "capacitor.jpg"
+
+  technicalSpecs: [
+    { label: "Voltage Range", value: "1kV – 50kV" },
+    { label: "Capacitance Range", value: "10pF – 10000pF" },
+    { label: "Tolerance", value: "±5%, ±10%" },
+    { label: "Operating Temp", value: "-40°C to +125°C" }
+  ],
+
+  datasheetPdf: "/pdf/hvcap-ceramic.pdf"
 },
 
+
+
 {
-  title: "Film Capacitor",
-  slug: "film-capacitor",
+  title: "X2 Film Capacitors - Champion",
+  slug: "film-capacitor-champion",
   category: "Capacitors",
   categorySlug: "capacitors",
-  description: "Polypropylene and polyester film capacitors.",
-  specs: "X2 safety certified / Power film types",
+
+  specs: "X2 Safety Capacitors",
+
+  description:
+    "Champion X2 film capacitors for EMI suppression and safety applications.",
+
+  image: "capacitor.jpg",
+
   features: [
-    "Low loss",
-    "High reliability",
-    "Stable capacitance",
-    "Long service life"
+    "X2 safety certified",
+    "Self-healing property",
+    "Flame retardant casing",
+    "Long lifetime"
   ],
-  image: "capacitor.jpg"
+
+  technicalSpecs: [
+    { label: "Capacitance Range", value: "0.01uF – 10uF" },
+    { label: "Rated Voltage", value: "275VAC" },
+    { label: "Temperature Class", value: "-40°C to +110°C" },
+    { label: "Safety Standard", value: "ENEC / UL / VDE" }
+  ],
+
+  datasheetPdf: "/pdf/champion-x2.pdf"
 },
+
+
 
 {
   title: "Super Capacitor",
