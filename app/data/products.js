@@ -126,13 +126,15 @@ export const products = [
     "Custom dimensions available"
   ],
 
-  datasheetImages: [
-    "/products/shunt/shunt1.jpg",
-    "/products/shunt/shunt2.jpg",
-    "/products/shunt/shunt3.jpg",
-    "/products/shunt/shunt4.jpg",
-    "/products/shunt/shunt5.jpg",
-    "/products/shunt/shunt6.jpg"
+ image: "shunt.jpg",
+
+datasheetImages: [
+  "/products/shunt1.png",
+  "/products/shunt2.png",
+  "/products/shunt3.png",
+  "/products/shunt4.png"
+
+
   ]
   },
   {
