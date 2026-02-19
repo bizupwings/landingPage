@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { products } from "@/app/data/products";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -24,15 +26,20 @@ export default function ProductDetail({ params }) {
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
           {/* Product Image */}
-          <div className="bg-white rounded-xl shadow p-6">
-            <Image
-              src={`/products/${product.image}`}
-              alt={product.title}
-              width={600}
-              height={500}
-              className="object-contain w-full h-auto"
-            />
-          </div>
+       <div>
+  {product.datasheetImages && product.datasheetImages.length > 0 ? (
+    <ImageCarousel images={product.datasheetImages} />
+  ) : (
+    <Image
+      src={`/products/${product.image}`}
+      alt={product.title}
+      width={800}
+      height={500}
+      className="object-contain rounded-lg bg-white w-full"
+    />
+  )}
+</div>
+
 
           {/* Product Info */}
           <div>
@@ -129,6 +136,43 @@ export default function ProductDetail({ params }) {
 
       </div>
     </section>
+  );
+}
+function ImageCarousel({ images }) {
+  const [index, setIndex] = useState(0);
+
+  const prev = () => {
+    setIndex((index - 1 + images.length) % images.length);
+  };
+
+  const next = () => {
+    setIndex((index + 1) % images.length);
+  };
+
+  return (
+    <div className="relative">
+      <Image
+        src={images[index]}
+        alt="product image"
+        width={800}
+        height={500}
+        className="rounded-lg bg-white object-contain w-full"
+      />
+
+      <button
+        onClick={prev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
+      >
+        ◀
+      </button>
+
+      <button
+        onClick={next}
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
+      >
+        ▶
+      </button>
+    </div>
   );
 }
 
