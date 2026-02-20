@@ -56,19 +56,27 @@ export const products = [
   },
  {
   title: "AL Capacitor (Electrolytic)",
-  slug: "al-capacitor",
+  slug: "al",  
   category: "Capacitors",
   categorySlug: "capacitors",
-  description: "Aluminium electrolytic capacitors for industrial and general applications.",
+
+  description:
+    "Aluminium electrolytic capacitors for industrial and general applications.",
+
   specs: "Radial / Snap-in / Screw Terminal types available",
+
   features: [
     "High ripple current",
     "Long lifetime",
     "Wide voltage range",
     "Industrial grade quality"
   ],
-  image: "capacitor.jpg"
+
+  image: "al-capacitor.jpg",   
+
+  datasheetPdf: "/pdf/al-profile.pdf"   
 },
+
 
 {
   title: "SMD Aluminum Capacitor",
