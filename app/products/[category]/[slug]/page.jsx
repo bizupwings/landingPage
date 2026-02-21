@@ -24,13 +24,6 @@ export default function ProductDetail({ params }) {
   // ✅ 再判断
   if (!product) return notFound();
 
-  // ===== 多 PDF 支持 =====
-  const hasMultiplePdfs =
-    product.datasheetPdfs && product.datasheetPdfs.length > 0;
-
-  const [activePdf, setActivePdf] = useState(
-    hasMultiplePdfs ? product.datasheetPdfs[0] : null
-  );
 
   return (
     <section className="py-16 bg-gray-50 min-h-screen">
