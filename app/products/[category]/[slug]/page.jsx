@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { products } from "@/app/data/products";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -13,6 +14,13 @@ export default function ProductDetail({ params }) {
   );
 
   if (!product) return notFound();
+
+  const hasMultiplePdfs =
+    product.datasheetPdfs && product.datasheetPdfs.length > 0;
+
+  const [activePdf, setActivePdf] = useState(
+    hasMultiplePdfs ? product.datasheetPdfs[0] : null
+  );
 
   return (
     <section className="py-16 bg-gray-50 min-h-screen">
@@ -109,8 +117,54 @@ export default function ProductDetail({ params }) {
           </div>
         </div>
 
-        {/* Datasheet Section */}
-        {product.datasheetPdf && (
+        {/* ===== DATASHEET SECTION ===== */}
+
+        {/* Multiple PDFs (for SMD) */}
+        {hasMultiplePdfs && (
+          <div className="mt-20">
+            <h2 className="text-2xl font-bold mb-6">
+              Datasheets
+            </h2>
+
+            {/* Tab Buttons */}
+            <div className="flex gap-6 mb-6 border-b pb-3">
+              {product.datasheetPdfs.map((pdf) => (
+                <button
+                  key={pdf.label}
+                  onClick={() => setActivePdf(pdf)}
+                  className={`font-semibold transition ${
+                    activePdf.label === pdf.label
+                      ? "text-blue-600 border-b-2 border-blue-600"
+                      : "text-gray-500"
+                  }`}
+                >
+                  {pdf.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Download Button */}
+            <a
+              href={activePdf.url}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block mb-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+            >
+              Download {activePdf.label} (PDF)
+            </a>
+
+            {/* PDF Preview */}
+            <div className="border rounded-xl overflow-hidden shadow bg-white">
+              <iframe
+                src={activePdf.url}
+                className="w-full h-[800px]"
+              />
+            </div>
+          </div>
+        )}
+
+        {/* Single PDF (其他产品用原逻辑) */}
+        {!hasMultiplePdfs && product.datasheetPdf && (
           <div className="mt-20">
             <h2 className="text-2xl font-bold mb-6">
               Datasheet
@@ -138,5 +192,3 @@ export default function ProductDetail({ params }) {
     </section>
   );
 }
-
-       
