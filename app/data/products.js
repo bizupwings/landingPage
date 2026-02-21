@@ -236,7 +236,7 @@ export const products = [
   title: "LCD Display Module",
   slug: "lcd-module",
   category: "Displays",
-  categorySlug: "displays",
+  categorySlug: "liquid-crystal-display-lcd",
   description: "Industrial and commercial grade intelligent LCD modules based on T5L ASIC.",
   specs: "IPS / TN / Touch Screen / DGUS II Platform",
 
