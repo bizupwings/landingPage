@@ -90,6 +90,17 @@ export const products = [
     "Low impedance",
     "RoHS compliant",
     "Stable performance"
+ ],
+    datasheetPdfs: [
+  {
+    label: "Liquid Type",
+    url: "/pdf/smd-liquid.pdf",
+  },
+  {
+    label: "Solid Polymer Type",
+    url: "/pdf/smd-solid.pdf",
+  },
+
   ],
   image: "capacitor.jpg"
 },
