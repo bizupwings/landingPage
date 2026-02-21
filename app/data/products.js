@@ -233,12 +233,41 @@ export const products = [
 
   },
   {
-    title: "LCD Displays",
-    slug: "lcd-displays",
-    category: "Liquid Crystal Display (LCD)",
-    categorySlug: "liquid-crystal-display-lcd",
-    specs: "Alpha Numeric, Seven Segment, Graphics LCD",
-    image: "lcd.jpg",
+  title: "LCD Display Module",
+  slug: "lcd-module",
+  category: "Displays",
+  categorySlug: "displays",
+  description: "Industrial and commercial grade intelligent LCD modules based on T5L ASIC.",
+  specs: "IPS / TN / Touch Screen / DGUS II Platform",
+
+  models: [
+    {
+      name: "DMG10600C101_03WTC",
+      size: "10.1 inch IPS 1024×600",
+      voltage: "6~15V",
+      pdf: "/pdf/DMG10600C101_03WTC.pdf"
+    },
+    {
+      name: "DMG80480C070_03WTC",
+      size: "7.0 inch TN 800×480",
+      voltage: "5V",
+      pdf: "/pdf/DMG80480C070_03WTC.pdf"
+    },
+    {
+      name: "DMG80480T035_01WTC",
+      size: "3.5 inch IPS 480×800",
+      voltage: "5V",
+      pdf: "/pdf/DMG80480T035_01WTC.pdf"
+    },
+    {
+      name: "DMG80480T043_01WTC",
+      size: "4.3 inch IPS 480×800",
+      voltage: "9~36V",
+      pdf: "/pdf/DMG80480T043_01WTC.pdf"
+    }
+  ],
+
+  image: "lcd.jpg"
   },
   {
     title: "LED Displays",
