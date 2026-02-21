@@ -38,22 +38,30 @@ export const products = [
     applications: ["Remote Control Systems", "TV", "Energy Meters"],
     image: "ir_led.jpg",
   },
-  {
-    title: "Lithium Batteries",
-    slug: "lithium-batteries",
-    category: "Batteries",
-    categorySlug: "batteries",
-    specs: "Li/SOCI2, Li/MnO2, Li-ion, Li-Polymer (25mAh to 10,000mAh)",
-    image: "li-battery.jpeg",
-  },
-  {
-    title: "Nickel Batteries",
-    slug: "nickel-batteries",
-    category: "Batteries",
-    categorySlug: "batteries",
-    specs: "Ni-Mh, Ni-Cd Batteries (25mAh to 50,000mAh)",
-    image: "ni_battery.jpg",
-  },
+   {
+  title: "CR Batteries",
+  slug: "cr-batteries",
+  category: "Batteries",
+  categorySlug: "batteries",
+  description: "Lithium manganese dioxide CR coin cell batteries.",
+  specs: "CR2032 / CR2025 / CR2016 / 30+ Models",
+  image: "cr-battery.jpg",
+
+  datasheetPdfs: [
+    {
+      label: "CR Proposal",
+      url: "/pdf/CR-Coin-Battery-Proposal-2023.pdf"
+    },
+    {
+      label: "Product List",
+      url: "/pdf/CR-Product-List.pdf"
+    },
+    {
+      label: "Tech Introduction",
+      url: "/pdf/CR-Tech-Introduction.pdf"
+    }
+  ]
+},
  {
   title: "AL Capacitor (Electrolytic)",
   slug: "al",  
