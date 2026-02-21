@@ -13,14 +13,16 @@ export default function ProductDetail({ params }) {
     (p) => p.slug === slug && p.categorySlug === categorySlug
   );
 
-  if (!product) return notFound();
-
+  // ✅ 先准备变量
   const hasMultiplePdfs =
-    product.datasheetPdfs && product.datasheetPdfs.length > 0;
+    product?.datasheetPdfs && product.datasheetPdfs.length > 0;
 
   const [activePdf, setActivePdf] = useState(
-    hasMultiplePdfs ? product.datasheetPdfs[0] : null
+    hasMultiplePdfs ? product?.datasheetPdfs[0] : null
   );
+
+  // ✅ 再判断是否 notFound
+  if (!product) return notFound();
 
   return (
     <section className="py-16 bg-gray-50 min-h-screen">
