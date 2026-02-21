@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { products } from "@/app/data/products";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -13,16 +13,19 @@ export default function ProductDetail({ params }) {
     (p) => p.slug === slug && p.categorySlug === categorySlug
   );
 
-  // ✅ 先准备变量
-  const hasMultiplePdfs =
-    product?.datasheetPdfs && product.datasheetPdfs.length > 0;
-
-  const [activePdf, setActivePdf] = useState(
-    hasMultiplePdfs ? product?.datasheetPdfs[0] : null
-  );
-
-  // ✅ 再判断是否 notFound
   if (!product) return notFound();
+
+  const hasMultiplePdfs =
+    product.datasheetPdfs && product.datasheetPdfs.length > 0;
+
+  const [activePdf, setActivePdf] = useState(null);
+
+  // ✅ 确保在 product 确认存在后再设置默认 PDF
+  useEffect(() => {
+    if (hasMultiplePdfs) {
+      setActivePdf(product.datasheetPdfs[0]);
+    }
+  }, [hasMultiplePdfs, product]);
 
   return (
     <section className="py-16 bg-gray-50 min-h-screen">
@@ -71,73 +74,68 @@ export default function ProductDetail({ params }) {
             )}
 
             {/* Features */}
-            {product.features && product.features.length > 0 && (
+            {product.features?.length > 0 && (
               <div className="mb-10">
                 <h3 className="text-lg font-semibold mb-4 border-b pb-2">
                   Features
                 </h3>
 
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
-                  {product.features.map((f) => (
-                    <li key={f}>{f}</li>
+                  {product.features.map((f, i) => (
+                    <li key={i}>{f}</li>
                   ))}
                 </ul>
               </div>
             )}
 
             {/* Technical Specs */}
-            {product.technicalSpecs &&
-              product.technicalSpecs.length > 0 && (
-                <div className="mb-10">
-                  <h3 className="text-lg font-semibold mb-4 border-b pb-2">
-                    Technical Specifications
-                  </h3>
+            {product.technicalSpecs?.length > 0 && (
+              <div className="mb-10">
+                <h3 className="text-lg font-semibold mb-4 border-b pb-2">
+                  Technical Specifications
+                </h3>
 
-                  <div className="overflow-x-auto bg-white rounded-lg shadow">
-                    <table className="w-full text-sm">
-                      <tbody>
-                        {product.technicalSpecs.map((spec, index) => (
-                          <tr
-                            key={spec.label}
-                            className={
-                              index % 2 === 0 ? "bg-gray-50" : ""
-                            }
-                          >
-                            <td className="px-6 py-3 text-gray-600 w-1/2 border-b">
-                              {spec.label}
-                            </td>
-                            <td className="px-6 py-3 font-medium border-b">
-                              {spec.value}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
+                <div className="overflow-x-auto bg-white rounded-lg shadow">
+                  <table className="w-full text-sm">
+                    <tbody>
+                      {product.technicalSpecs.map((spec, index) => (
+                        <tr
+                          key={index}
+                          className={index % 2 === 0 ? "bg-gray-50" : ""}
+                        >
+                          <td className="px-6 py-3 text-gray-600 w-1/2 border-b">
+                            {spec.label}
+                          </td>
+                          <td className="px-6 py-3 font-medium border-b">
+                            {spec.value}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
-              )}
+              </div>
+            )}
           </div>
         </div>
 
         {/* ===== DATASHEET SECTION ===== */}
-
-        {/* Multiple PDFs (for SMD) */}
-        {hasMultiplePdfs && (
+        {hasMultiplePdfs && activePdf && (
           <div className="mt-20">
             <h2 className="text-2xl font-bold mb-6">
               Datasheets
             </h2>
 
-            {/* Tab Buttons */}
-            <div className="flex gap-6 mb-6 border-b pb-3">
-              {product.datasheetPdfs.map((pdf) => (
+            {/* Tabs */}
+            <div className="flex flex-wrap gap-6 mb-6 border-b pb-3">
+              {product.datasheetPdfs.map((pdf, index) => (
                 <button
-                  key={pdf.label}
+                  key={index}
                   onClick={() => setActivePdf(pdf)}
-                  className={`font-semibold transition ${
+                  className={`pb-2 font-semibold transition ${
                     activePdf.label === pdf.label
                       ? "text-blue-600 border-b-2 border-blue-600"
-                      : "text-gray-500"
+                      : "text-gray-500 hover:text-gray-700"
                   }`}
                 >
                   {pdf.label}
@@ -155,9 +153,10 @@ export default function ProductDetail({ params }) {
               Download {activePdf.label} (PDF)
             </a>
 
-            {/* PDF Preview */}
+            {/* Preview */}
             <div className="border rounded-xl overflow-hidden shadow bg-white">
               <iframe
+                key={activePdf.url}
                 src={activePdf.url}
                 className="w-full h-[800px]"
               />
@@ -165,7 +164,7 @@ export default function ProductDetail({ params }) {
           </div>
         )}
 
-        {/* Single PDF (其他产品用原逻辑) */}
+        {/* Single PDF */}
         {!hasMultiplePdfs && product.datasheetPdf && (
           <div className="mt-20">
             <h2 className="text-2xl font-bold mb-6">
