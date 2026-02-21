@@ -13,36 +13,33 @@ export default function ProductDetail({ params }) {
     (p) => p.slug === slug && p.categorySlug === categorySlug
   );
 
-  if (!product) return notFound();
-
-  const hasMultiplePdfs =
-    product.datasheetPdfs && product.datasheetPdfs.length > 0;
-
+  // ✅ Hooks 必须写在最顶层
   const [activePdf, setActivePdf] = useState(null);
 
-  // ✅ 确保在 product 确认存在后再设置默认 PDF
+  const hasMultiplePdfs =
+    product?.datasheetPdfs && product.datasheetPdfs.length > 0;
+
   useEffect(() => {
     if (hasMultiplePdfs) {
       setActivePdf(product.datasheetPdfs[0]);
     }
   }, [hasMultiplePdfs, product]);
 
+  // ✅ Hooks 写完后再判断
+  if (!product) return notFound();
+
   return (
     <section className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-6">
 
-        {/* Breadcrumb */}
         <p className="text-sm text-gray-500 mb-8">
           Home / Products / {product.category} / {product.title}
         </p>
 
-        {/* ===== TOP SECTION ===== */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
-          {/* Product Image */}
           <div>
-            {product.datasheetImages &&
-            product.datasheetImages.length > 0 ? (
+            {product.datasheetImages?.length > 0 ? (
               <ImageCarousel images={product.datasheetImages} />
             ) : (
               <Image
@@ -55,7 +52,6 @@ export default function ProductDetail({ params }) {
             )}
           </div>
 
-          {/* Product Info */}
           <div>
             <h1 className="text-4xl font-bold text-gray-800 mb-6">
               {product.title}
@@ -65,56 +61,6 @@ export default function ProductDetail({ params }) {
               <p className="text-gray-700 mb-6 leading-relaxed">
                 {product.description}
               </p>
-            )}
-
-            {product.specs && (
-              <p className="text-gray-600 mb-6">
-                {product.specs}
-              </p>
-            )}
-
-            {/* Features */}
-            {product.features?.length > 0 && (
-              <div className="mb-10">
-                <h3 className="text-lg font-semibold mb-4 border-b pb-2">
-                  Features
-                </h3>
-
-                <ul className="list-disc list-inside text-gray-600 space-y-2">
-                  {product.features.map((f, i) => (
-                    <li key={i}>{f}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* Technical Specs */}
-            {product.technicalSpecs?.length > 0 && (
-              <div className="mb-10">
-                <h3 className="text-lg font-semibold mb-4 border-b pb-2">
-                  Technical Specifications
-                </h3>
-
-                <div className="overflow-x-auto bg-white rounded-lg shadow">
-                  <table className="w-full text-sm">
-                    <tbody>
-                      {product.technicalSpecs.map((spec, index) => (
-                        <tr
-                          key={index}
-                          className={index % 2 === 0 ? "bg-gray-50" : ""}
-                        >
-                          <td className="px-6 py-3 text-gray-600 w-1/2 border-b">
-                            {spec.label}
-                          </td>
-                          <td className="px-6 py-3 font-medium border-b">
-                            {spec.value}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
             )}
           </div>
         </div>
@@ -126,16 +72,15 @@ export default function ProductDetail({ params }) {
               Datasheets
             </h2>
 
-            {/* Tabs */}
-            <div className="flex flex-wrap gap-6 mb-6 border-b pb-3">
+            <div className="flex gap-6 mb-6 border-b pb-3">
               {product.datasheetPdfs.map((pdf, index) => (
                 <button
                   key={index}
                   onClick={() => setActivePdf(pdf)}
                   className={`pb-2 font-semibold transition ${
-                    activePdf.label === pdf.label
+                    activePdf?.label === pdf.label
                       ? "text-blue-600 border-b-2 border-blue-600"
-                      : "text-gray-500 hover:text-gray-700"
+                      : "text-gray-500"
                   }`}
                 >
                   {pdf.label}
@@ -143,7 +88,6 @@ export default function ProductDetail({ params }) {
               ))}
             </div>
 
-            {/* Download Button */}
             <a
               href={activePdf.url}
               target="_blank"
@@ -153,36 +97,10 @@ export default function ProductDetail({ params }) {
               Download {activePdf.label} (PDF)
             </a>
 
-            {/* Preview */}
             <div className="border rounded-xl overflow-hidden shadow bg-white">
               <iframe
                 key={activePdf.url}
                 src={activePdf.url}
-                className="w-full h-[800px]"
-              />
-            </div>
-          </div>
-        )}
-
-        {/* Single PDF */}
-        {!hasMultiplePdfs && product.datasheetPdf && (
-          <div className="mt-20">
-            <h2 className="text-2xl font-bold mb-6">
-              Datasheet
-            </h2>
-
-            <a
-              href={product.datasheetPdf}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block mb-8 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
-            >
-              Download Datasheet (PDF)
-            </a>
-
-            <div className="border rounded-xl overflow-hidden shadow bg-white">
-              <iframe
-                src={product.datasheetPdf}
                 className="w-full h-[800px]"
               />
             </div>
