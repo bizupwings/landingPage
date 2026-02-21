@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { products } from "@/app/data/products";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -13,31 +12,21 @@ export default function ProductDetail({ params }) {
     (p) => p.slug === slug && p.categorySlug === categorySlug
   );
 
-  // ✅ Hooks 必须写在最顶层
-  const [activePdf, setActivePdf] = useState(null);
-
-  const hasMultiplePdfs =
-    product?.datasheetPdfs && product.datasheetPdfs.length > 0;
-
-  useEffect(() => {
-    if (hasMultiplePdfs) {
-      setActivePdf(product.datasheetPdfs[0]);
-    }
-  }, [hasMultiplePdfs, product]);
-
-  // ✅ Hooks 写完后再判断
   if (!product) return notFound();
 
   return (
     <section className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-6">
 
+        {/* Breadcrumb */}
         <p className="text-sm text-gray-500 mb-8">
           Home / Products / {product.category} / {product.title}
         </p>
 
+        {/* ===== TOP SECTION ===== */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
+          {/* Product Image */}
           <div>
             {product.datasheetImages?.length > 0 ? (
               <ImageCarousel images={product.datasheetImages} />
@@ -52,6 +41,7 @@ export default function ProductDetail({ params }) {
             )}
           </div>
 
+          {/* Product Info */}
           <div>
             <h1 className="text-4xl font-bold text-gray-800 mb-6">
               {product.title}
@@ -62,48 +52,69 @@ export default function ProductDetail({ params }) {
                 {product.description}
               </p>
             )}
+
+            {product.specs && (
+              <p className="text-gray-600 mb-6">
+                {product.specs}
+              </p>
+            )}
           </div>
         </div>
 
-        {/* ===== DATASHEET SECTION ===== */}
-        {hasMultiplePdfs && activePdf && (
+        {/* ===== MODELS SECTION ===== */}
+        {product.models && product.models.length > 0 && (
           <div className="mt-20">
-            <h2 className="text-2xl font-bold mb-6">
-              Datasheets
+            <h2 className="text-2xl font-bold mb-8">
+              Available Models
             </h2>
 
-            <div className="flex gap-6 mb-6 border-b pb-3">
-              {product.datasheetPdfs.map((pdf, index) => (
-                <button
+            <div className="grid md:grid-cols-2 gap-8">
+              {product.models.map((model, index) => (
+                <div
                   key={index}
-                  onClick={() => setActivePdf(pdf)}
-                  className={`pb-2 font-semibold transition ${
-                    activePdf?.label === pdf.label
-                      ? "text-blue-600 border-b-2 border-blue-600"
-                      : "text-gray-500"
-                  }`}
+                  className="bg-white rounded-xl shadow-md p-6 border hover:shadow-xl transition"
                 >
-                  {pdf.label}
-                </button>
+                  <h3 className="text-lg font-semibold mb-3">
+                    {model.name}
+                  </h3>
+
+                  <p className="text-gray-600 mb-2">
+                    {model.size}
+                  </p>
+
+                  <p className="text-gray-600 mb-4">
+                    Voltage: {model.voltage}
+                  </p>
+
+                  <a
+                    href={model.pdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-block px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                  >
+                    Download Datasheet
+                  </a>
+                </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* ===== 单个 PDF 兼容旧产品 ===== */}
+        {product.datasheetPdf && (
+          <div className="mt-20">
+            <h2 className="text-2xl font-bold mb-6">
+              Datasheet
+            </h2>
 
             <a
-              href={activePdf.url}
+              href={product.datasheetPdf}
               target="_blank"
               rel="noreferrer"
-              className="inline-block mb-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
             >
-              Download {activePdf.label} (PDF)
+              Download Datasheet (PDF)
             </a>
-
-            <div className="border rounded-xl overflow-hidden shadow bg-white">
-              <iframe
-                key={activePdf.url}
-                src={activePdf.url}
-                className="w-full h-[800px]"
-              />
-            </div>
           </div>
         )}
 
