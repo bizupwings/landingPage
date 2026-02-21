@@ -245,25 +245,25 @@ export const products = [
       name: "DMG10600C101_03WTC",
       size: "10.1 inch IPS 1024×600",
       voltage: "6~15V",
-      pdf: "/pdf/DMG10600C101_03WTC.pdf"
+      pdf: "/pdf/lcd-128x64-blue.pdf"
     },
     {
       name: "DMG80480C070_03WTC",
       size: "7.0 inch TN 800×480",
       voltage: "5V",
-      pdf: "/pdf/DMG80480C070_03WTC.pdf"
+      pdf: "/pdf/lcd-128x64-white.pdf"
     },
     {
       name: "DMG80480T035_01WTC",
       size: "3.5 inch IPS 480×800",
       voltage: "5V",
-      pdf: "/pdf/DMG80480T035_01WTC.pdf"
+      pdf: "/pdf/lcd-160x32.pdf"
     },
     {
       name: "DMG80480T043_01WTC",
       size: "4.3 inch IPS 480×800",
       voltage: "9~36V",
-      pdf: "/pdf/DMG80480T043_01WTC.pdf"
+      pdf: "/pdf/lcd-200x64.pdf"
     }
   ],
 
