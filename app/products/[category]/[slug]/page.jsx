@@ -13,6 +13,15 @@ export default function ProductDetail({ params }) {
     (p) => p.slug === slug && p.categorySlug === categorySlug
   );
 
+  // ✅ 先声明 Hook
+  const hasMultiplePdfs =
+    product?.datasheetPdfs && product.datasheetPdfs.length > 0;
+
+  const [activePdf, setActivePdf] = useState(
+    hasMultiplePdfs ? product?.datasheetPdfs[0] : null
+  );
+
+  // ✅ 再判断
   if (!product) return notFound();
 
   // ===== 多 PDF 支持 =====
