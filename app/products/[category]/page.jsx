@@ -1,7 +1,11 @@
 import { products } from "@/app/data/products";
 import Link from "next/link";
 import InductorsShowcase from "@/app/components/InductorsShowcase";
+import TantalumShowcase from "@/app/components/TantalumShowcase";
 
+if (category === "tantalum-capacitor") {
+  return <TantalumShowcase />;
+}
 export default function CategoryPage({ params }) {
   const categorySlug = params.category; // 路由里的是 slug，比如 crystals-frequency-devices
 
