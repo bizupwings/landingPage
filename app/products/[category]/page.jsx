@@ -3,22 +3,25 @@ import Link from "next/link";
 import InductorsShowcase from "@/app/components/InductorsShowcase";
 import TantalumShowcase from "@/app/components/TantalumShowcase";
 
-if (category === "tantalum-capacitor") {
-  return <TantalumShowcase />;
-}
 export default function CategoryPage({ params }) {
-  const categorySlug = params.category; // 路由里的是 slug，比如 crystals-frequency-devices
+  const categorySlug = params.category;
 
+  // ✅ 特殊展示页：Inductors
+  if (categorySlug === "inductors") {
+    return <InductorsShowcase />;
+  }
+
+  // ✅ 特殊展示页：Tantalum Capacitor
+  if (categorySlug === "tantalum-capacitor") {
+    return <TantalumShowcase />;
+  }
+
+  // ===== 普通分类页逻辑 =====
   const filteredProducts =
     categorySlug === "all"
       ? products
       : products.filter((p) => p.categorySlug === categorySlug);
-  
-  if (categorySlug === "inductors") {
-  return <InductorsShowcase />;
-}
 
-  // 用数据里的中文/原始名称做标题（找不到就退回显示 slug）
   const categoryTitle =
     categorySlug === "all"
       ? "All Products"
@@ -27,7 +30,9 @@ export default function CategoryPage({ params }) {
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-8">Products in {categoryTitle}</h1>
+        <h1 className="text-3xl font-bold mb-8">
+          Products in {categoryTitle}
+        </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
@@ -37,7 +42,9 @@ export default function CategoryPage({ params }) {
             >
               <div className="bg-white rounded-lg shadow p-4 hover:shadow-lg cursor-pointer">
                 <h2 className="font-semibold">{product.title}</h2>
-                <p className="text-sm text-gray-600 mt-2">{product.specs}</p>
+                <p className="text-sm text-gray-600 mt-2">
+                  {product.specs}
+                </p>
               </div>
             </Link>
           ))}
@@ -46,4 +53,3 @@ export default function CategoryPage({ params }) {
     </section>
   );
 }
-
