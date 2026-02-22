@@ -400,36 +400,36 @@ datasheetImages: [
 // ===== METER =====
 
 {
-  name: "Water Meter",
+  title: "Water Meter",
   slug: "water-meter",
   category: "Meter",
   categorySlug: "meter",
   description: "Ultrasonic water meter & heat meter solutions.",
-  images: [],
+  images: ["water-meter.jpg"],
   datasheetPdfs: [
     "/pdf/water-meter.pdf"
   ]
 },
 
 {
-  name: "Energy Meter",
+  title: "Energy Meter",
   slug: "energy-meter",
   category: "Meter",
   categorySlug: "meter",
   description: "Single-phase & three-phase electric energy meters.",
-  images: [],
+  images: [ "energy-meter.jpg"],
   datasheetPdfs: [
     "/pdf/energy-meter.pdf"
   ]
 },
 
 {
-  name: "Smart IoT Meter",
+  title: "Smart IoT Meter",
   slug: "iot-meter",
   category: "Meter",
   categorySlug: "meter",
   description: "Din rail meter, DC meter & IoT gateway.",
-  images: [],
+  images: [ "iot-meter.jpg"],
   datasheetPdfs: [
     "/pdf/iot-meter.pdf"
   ]
