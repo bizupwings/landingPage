@@ -5,20 +5,17 @@ import { products } from "@/app/data/products";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import ImageCarousel from "@/app/components/ImageCarousel";
+import TantalumShowcase from "@/app/components/TantalumShowcase";
 
 export default function ProductDetail({ params }) {
   const { category: categorySlug, slug } = params;
-  
-// ✅ Tantalum 专属页面
-if (slug === "tantalum-capacitor") {
-  return <TantalumShowcase />;
-}
 
+  // 先查找产品
   const product = products.find(
     (p) => p.slug === slug && p.categorySlug === categorySlug
   );
 
-  // ✅ 先声明 Hook
+  // 所有 Hook 必须写在 return 之前
   const hasMultiplePdfs =
     product?.datasheetPdfs && product.datasheetPdfs.length > 0;
 
@@ -26,13 +23,17 @@ if (slug === "tantalum-capacitor") {
     hasMultiplePdfs ? product?.datasheetPdfs[0] : null
   );
 
-  // ✅ 再判断
-  if (!product) return notFound();
+  // ✅ 专属页面必须写在 hook 之后
+  if (slug === "tantalum-capacitor") {
+    return <TantalumShowcase />;
+  }
 
+  if (!product) return notFound();
 
   return (
     <section className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-6">
+
 
         {/* Breadcrumb */}
         <p className="text-sm text-gray-500 mb-8">
