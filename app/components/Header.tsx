@@ -25,6 +25,7 @@ const categories = [
   "Relays",
   "Circuit Safety Devices",
   "Meter",  
+  "Inductors",
 ];
 
 /* ============================= */
@@ -45,6 +46,7 @@ const categorySlugMap: Record<string, string> = {
   Relays: "relays",
   "Circuit Safety Devices": "circuit-safety-devices",
    Meter: "meter",  
+  Inductors: "inductors",
 };
 
 export default function Header() {
