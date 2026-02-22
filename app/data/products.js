@@ -459,7 +459,7 @@ datasheetImages: [
   title: "IoT Metering Solution",
   slug: "iot-metering-solution",
   category: "Solutions",
-  categorySlug: "solutions",
+  categorySlug: "meter",
   image: "iot-meter.jpg",
 
   description: "Smart energy management platform.",
