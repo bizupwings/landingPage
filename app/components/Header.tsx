@@ -24,6 +24,7 @@ const categories = [
   "Bare PCB",
   "Relays",
   "Circuit Safety Devices",
+  "Meter",  
 ];
 
 /* ============================= */
@@ -43,6 +44,7 @@ const categorySlugMap: Record<string, string> = {
   "Bare PCB": "bare-pcb",
   Relays: "relays",
   "Circuit Safety Devices": "circuit-safety-devices",
+   Meter: "meter",  
 };
 
 export default function Header() {
