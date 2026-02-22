@@ -396,7 +396,7 @@ datasheetImages: [
     specs: "Fuses (Auto/Glass/Ceramic/SMD), MOV",
     image: "fuse.jpg",
   },
-];
+
 // ===== METER =====
 
 {
@@ -434,3 +434,6 @@ datasheetImages: [
     "/pdf/iot-meter.pdf"
   ]
 }
+
+];
+];
