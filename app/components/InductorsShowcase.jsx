@@ -9,7 +9,6 @@ export default function InductorsShowcase() {
 
         <div className="space-y-20">
 
-          {/* 1 I-Shaped */}
           <SeriesBlock
             title="I-Shaped Inductor"
             features={[
@@ -20,7 +19,6 @@ export default function InductorsShowcase() {
             ]}
           />
 
-          {/* 2 Covering */}
           <SeriesBlock
             title="Covering Inductance"
             features={[
@@ -31,7 +29,6 @@ export default function InductorsShowcase() {
             ]}
           />
 
-          {/* 3 Magnetic Shielding */}
           <SeriesBlock
             title="Magnetic Shielding Inductor"
             features={[
@@ -42,7 +39,6 @@ export default function InductorsShowcase() {
             ]}
           />
 
-          {/* 4 Molded */}
           <SeriesBlock
             title="Integrally Molded Inductor"
             features={[
@@ -53,7 +49,6 @@ export default function InductorsShowcase() {
             ]}
           />
 
-          {/* 5 Multilayer */}
           <SeriesBlock
             title="Multilayer Chip Inductor"
             features={[
@@ -64,7 +59,6 @@ export default function InductorsShowcase() {
             ]}
           />
 
-          {/* 6 Magnetic Bead */}
           <SeriesBlock
             title="Magnetic Bead"
             features={[
@@ -76,6 +70,32 @@ export default function InductorsShowcase() {
           />
 
         </div>
+
+        {/* ===== PDF SECTION ===== */}
+        <div className="mt-24">
+          <h2 className="text-3xl font-bold mb-6">
+            Datasheet
+          </h2>
+
+          {/* Download Button */}
+          <a
+            href="/pdf/senses inductors.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block mb-8 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+          >
+            Download Full Datasheet (PDF)
+          </a>
+
+          {/* PDF Preview */}
+          <div className="border rounded-xl overflow-hidden shadow bg-white">
+            <iframe
+              src="/pdf/senses inductors.pdf"
+              className="w-full h-[800px]"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );
@@ -85,7 +105,6 @@ export default function InductorsShowcase() {
 function SeriesBlock({ title, features }) {
   return (
     <div className="bg-white p-8 rounded-xl shadow">
-
       <h2 className="text-2xl font-bold mb-6">
         {title}
       </h2>
@@ -98,7 +117,6 @@ function SeriesBlock({ title, features }) {
           </li>
         ))}
       </ul>
-
     </div>
   );
 }
