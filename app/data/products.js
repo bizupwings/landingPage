@@ -435,5 +435,5 @@ datasheetImages: [
   ]
 }
 
-];
+
 ];
