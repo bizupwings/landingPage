@@ -11,10 +11,7 @@ export default function CategoryPage({ params }) {
     return <InductorsShowcase />;
   }
 
-  // ✅ 特殊展示页：Tantalum Capacitor
-  if (categorySlug === "capacitors") {
-    return <TantalumShowcase />;
-  }
+
 
   // ===== 普通分类页逻辑 =====
   const filteredProducts =
