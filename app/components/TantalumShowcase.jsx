@@ -1,115 +1,102 @@
+"use client";
+
 export default function TantalumShowcase() {
+  const pdfUrl = "/pdf/xiangyee-profile.pdf";
+
   return (
     <section className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-6">
 
-        <h1 className="text-4xl font-bold mb-12">
-          Chip Tantalum Capacitor
-        </h1>
+        {/* Breadcrumb */}
+        <p className="text-sm text-gray-500 mb-8">
+          Home / Products / Tantalum Capacitor
+        </p>
 
-        <div className="space-y-20">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
 
-          <SeriesBlock
-            title="CA55 Conductive Polymer"
-            specs={[
-              "Capacitance: 0.68 – 1000 μF",
-              "Temp: -55℃ ~ +125℃",
-              "Tolerance: ±20%",
-              "Very Low ESR",
-              "Reflow: 3×260℃ / 10s"
-            ]}
-          />
+          {/* Image */}
+          <div>
+            <img
+              src="/products/tantalum.jpg"
+              alt="Tantalum Capacitor"
+              className="rounded-lg shadow bg-white w-full"
+            />
+          </div>
 
-          <SeriesBlock
-            title="CA45 MnO₂ Series"
-            specs={[
-              "Capacitance: 0.47 – 2200 μF",
-              "Voltage: 2.5 – 50V",
-              "Temp: -55℃ ~ +125℃",
-              "High electric field strength",
-              "Miniaturization"
-            ]}
-          />
+          {/* Info */}
+          <div>
+            <h1 className="text-4xl font-bold text-gray-800 mb-6">
+              Tantalum Capacitor
+            </h1>
 
-          <SeriesBlock
-            title="QCA45 Automotive Grade"
-            specs={[
-              "Capacitance: 0.1 – 680 μF",
-              "Temp: -55℃ ~ +125℃",
-              "Stable performance",
-              "Long life",
-              "Automotive DC/DC applications"
-            ]}
-          />
+            <p className="text-gray-700 mb-6">
+              Solid & polymer tantalum capacitors for high stability and compact design.
+            </p>
 
-          <SeriesBlock
-            title="CA45L Low ESR"
-            specs={[
-              "Low ESR",
-              "0.1 – 680 μF",
-              "Temp: -55℃ ~ +125℃",
-              "Industrial & Automotive",
-              "High reliability"
-            ]}
-          />
+            <h3 className="text-lg font-semibold mb-4 border-b pb-2">
+              Features
+            </h3>
 
-          <SeriesBlock
-            title="CA45H High Temp"
-            specs={[
-              "Up to 150℃ working",
-              "Stable performance",
-              "High reliability",
-              "0.1 – 680 μF",
-              "Automotive terminals"
-            ]}
-          />
+            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-8">
+              <li>Low ESR</li>
+              <li>High volumetric efficiency</li>
+              <li>Stable capacitance</li>
+              <li>Long operational life</li>
+            </ul>
 
+            <h3 className="text-lg font-semibold mb-4 border-b pb-2">
+              Technical Specifications
+            </h3>
+
+            <div className="bg-white rounded-lg shadow overflow-hidden">
+              <table className="w-full text-sm">
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-3 border-b">Capacitance Range</td>
+                    <td className="px-6 py-3 border-b font-medium">0.1µF – 1000µF</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 border-b">Voltage Range</td>
+                    <td className="px-6 py-3 border-b font-medium">6.3V – 50V</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-3 border-b">Operating Temp</td>
+                    <td className="px-6 py-3 border-b font-medium">-55°C to +125°C</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 border-b">Tolerance</td>
+                    <td className="px-6 py-3 border-b font-medium">±10% / ±20%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
 
-        {/* PDF 区域 */}
-        <div className="mt-24">
-          <h2 className="text-3xl font-bold mb-6">
+        {/* ===== PDF SECTION ===== */}
+        <div className="mt-20">
+          <h2 className="text-2xl font-bold mb-6">
             Datasheet
           </h2>
 
           <a
-            href="/pdf/xiangyee-profile.pdf"
+            href={pdfUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-block mb-8 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+            className="inline-block mb-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
           >
-            Download Full Datasheet
+            Download Datasheet (PDF)
           </a>
 
           <div className="border rounded-xl overflow-hidden shadow bg-white">
             <iframe
-              src="/pdf/xiangyee-profile.pdf"
-              className="w-full h-[900px]"
+              src={pdfUrl}
+              className="w-full h-[800px]"
             />
           </div>
         </div>
 
       </div>
     </section>
-  );
-}
-
-
-function SeriesBlock({ title, specs }) {
-  return (
-    <div className="bg-white p-8 rounded-xl shadow">
-      <h2 className="text-2xl font-bold mb-6">
-        {title}
-      </h2>
-
-      <ul className="grid md:grid-cols-2 gap-4 text-gray-700">
-        {specs.map((s, i) => (
-          <li key={i} className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-blue-600 rounded-full" />
-            {s}
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
