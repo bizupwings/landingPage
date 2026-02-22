@@ -400,39 +400,84 @@ datasheetImages: [
 // ===== METER =====
 
 {
-  title: "Water Meter",
-  slug: "water-meter",
+  title: "Ultrasonic Water Meter",
+  slug: "ultrasonic-water-meter",
   category: "Meter",
   categorySlug: "meter",
-  description: "Ultrasonic water meter & heat meter solutions.",
-  images: ["water-meter.jpg"],
-  datasheetPdfs: [
-    "/pdf/water-meter.pdf"
-  ]
+  image: "water-meter.jpg",
+
+  description: "High accuracy ultrasonic water meter.",
+
+  features: [
+    "DN15 – DN1000",
+    "ISO 4064",
+    "MID (B) & MID (D)",
+    "30+ Calibration Devices",
+    "200+ Patents"
+  ],
+
+  technicalSpecs: [
+    { label: "Measurement Range", value: "DN15 – DN1000" },
+    { label: "Standard", value: "ISO 4064" },
+    { label: "Lab Standard", value: "ISO/IEC 17025" },
+    { label: "Certification", value: "MID (B) / MID (D)" }
+  ],
+
+  datasheetPdf: "/pdf/water-meter.pdf"
+
+  
 },
 
 {
-  title: "Energy Meter",
-  slug: "energy-meter",
+  title: "Electronic Energy Meter",
+  slug: "electronic-energy-meter",
   category: "Meter",
   categorySlug: "meter",
-  description: "Single-phase & three-phase electric energy meters.",
-  images: [ "energy-meter.jpg"],
-  datasheetPdfs: [
-    "/pdf/energy-meter.pdf"
-  ]
+  image: "energy-meter.jpg",
+
+  description: "Single & three phase electronic meter.",
+
+  features: [
+    "Single / Three Phase",
+    "220V / 380V",
+    "Class 0.5 / 1.0",
+    "RS485 Modbus",
+    "Prepaid Option"
+  ],
+
+  technicalSpecs: [
+    { label: "Voltage", value: "220V / 380V" },
+    { label: "Accuracy", value: "0.5 / 1.0" },
+    { label: "Frequency", value: "50Hz" },
+    { label: "Communication", value: "RS485 Modbus" }
+  ],
+
+  datasheetPdf: "/pdf/energy-meter.pdf"
 },
 
 {
-  title: "Smart IoT Meter",
-  slug: "iot-meter",
-  category: "Meter",
-  categorySlug: "meter",
-  description: "Din rail meter, DC meter & IoT gateway.",
-  images: [ "iot-meter.jpg"],
-  datasheetPdfs: [
-    "/pdf/iot-meter.pdf"
-  ]
+  title: "IoT Metering Solution",
+  slug: "iot-metering-solution",
+  category: "Solutions",
+  categorySlug: "solutions",
+  image: "iot-meter.jpg",
+
+  description: "Smart energy management platform.",
+
+  features: [
+    "NIS6000 Platform",
+    "NSS6000 Safety System",
+    "Smart Billing",
+    "Distribution Monitor"
+  ],
+
+  technicalSpecs: [
+    { label: "Platform", value: "NIS6000 / NSS6000" },
+    { label: "Supported Devices", value: "DDSU666 / DJZ666" },
+    { label: "Application", value: "Buildings / PV / Smart Grid" }
+  ],
+
+  datasheetPdf: "/pdf/iot-meter.pdf"
 }
 
 
