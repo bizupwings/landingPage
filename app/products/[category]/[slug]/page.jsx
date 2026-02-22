@@ -8,6 +8,11 @@ import ImageCarousel from "@/app/components/ImageCarousel";
 
 export default function ProductDetail({ params }) {
   const { category: categorySlug, slug } = params;
+  
+// ✅ Tantalum 专属页面
+if (slug === "tantalum-capacitor") {
+  return <TantalumShowcase />;
+}
 
   const product = products.find(
     (p) => p.slug === slug && p.categorySlug === categorySlug
