@@ -196,20 +196,46 @@ export const products = [
 
 {
   title: "Super Capacitor",
-  slug: "super-cap",
+  slug: "super-capacitor",
   category: "Capacitors",
   categorySlug: "capacitors",
-  description: "Super capacitors for energy storage and backup power.",
-  specs: "High capacitance / Low ESR",
-  features: [
-    "High energy density",
-    "Fast charge-discharge",
-    "Long cycle life",
-    "Maintenance free"
-  ],
-  image: "capacitor.jpg"
+  image: "super-capacitor.jpg",
 
-  },
+  description: "Super Capacitor Series – High Capacity / Low ESR",
+
+  features: [
+    "High capacity",
+    "Low ESR",
+    "Long cycle life (>500,000 cycles)",
+    "Good consistency",
+  ],
+
+  technicalSpecs: [
+    {
+      label: "Rated Voltage",
+      value: "2.7V / 5.5V / 16V"
+    },
+    {
+      label: "Capacity Range",
+      value: "0.1F – 800F"
+    },
+    {
+      label: "Working Temperature",
+      value: "-40℃ to +85℃"
+    },
+    {
+      label: "Cycle Life",
+      value: ">500,000 cycles"
+    },
+    {
+      label: "Tolerance",
+      value: "-20% ~ +80%"
+    }
+  ],
+
+  datasheetPdf: "/pdf/super capacitor.pdf",
+},
+
   {
   title: "Resistors",
   slug: "resistors",
