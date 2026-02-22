@@ -23,7 +23,7 @@ const categories = [
   "Transformers",
   "Bare PCB",
   "Relays",
-  "Tantalum Capacitor"
+  "Tantalum Capacitor",
   "Circuit Safety Devices",
   "Meter",  
   "Inductors",
@@ -46,7 +46,7 @@ const categorySlugMap: Record<string, string> = {
   Transformers: "transformers",
   "Bare PCB": "bare-pcb",
   Relays: "relays",
-  "Tantalum Capacitor": "tantalum-capacitor"
+  "Tantalum Capacitor": "tantalum-capacitor",
   "Circuit Safety Devices": "circuit-safety-devices",
    Meter: "meter",  
   Inductors: "inductors",
