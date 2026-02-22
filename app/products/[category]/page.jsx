@@ -8,6 +8,10 @@ export default function CategoryPage({ params }) {
     categorySlug === "all"
       ? products
       : products.filter((p) => p.categorySlug === categorySlug);
+  
+  if (categorySlug === "inductors") {
+  return <InductorsShowcase />;
+}
 
   // 用数据里的中文/原始名称做标题（找不到就退回显示 slug）
   const categoryTitle =
