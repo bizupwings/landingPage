@@ -115,7 +115,7 @@ export const products = [
 
 {
   title: "Tantalum Capacitor",
-  slug: "tantalum",
+  slug: "tantalum-capacitor",
   category: "Capacitors",
   categorySlug: "capacitors",
   description: "Tantalum capacitors suitable for precision electronics.",
