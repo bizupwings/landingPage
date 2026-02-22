@@ -504,7 +504,13 @@ datasheetImages: [
   ],
 
   datasheetPdf: "/pdf/iot-meter.pdf"
+},
+  
+{
+  title: "Inductors",
+  slug: "inductors",
+  category: "Inductors",
+  categorySlug: "inductors",
 }
-
 
 ];
