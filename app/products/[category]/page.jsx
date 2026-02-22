@@ -12,7 +12,7 @@ export default function CategoryPage({ params }) {
   }
 
   // ✅ 特殊展示页：Tantalum Capacitor
-  if (categorySlug === "tantalum-capacitor") {
+  if (categorySlug === "capacitors") {
     return <TantalumShowcase />;
   }
 
