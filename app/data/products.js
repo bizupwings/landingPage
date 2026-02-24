@@ -253,6 +253,14 @@ export const products = [
 
   datasheetPdf: "/pdf/super capacitor.pdf",
 },
+  {
+  slug: "switch",
+  title: "Switch Series",
+  category: "Electronic Components",
+  categorySlug: "electronic-components",
+  specs: "Rocker Switch / Push Button / Toggle / Micro Switch",
+  image: "/images/switch/rocker.jpg"
+},
 
   {
   title: "Resistors",
