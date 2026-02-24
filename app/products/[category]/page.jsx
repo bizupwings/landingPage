@@ -2,15 +2,14 @@ import { products } from "@/app/data/products";
 import Link from "next/link";
 import InductorsShowcase from "@/app/components/InductorsShowcase";
 import SwitchPage from "@/app/components/SwitchPage";
-import { notFound } from "next/navigation";
 import ConnectorsShowcase from "@/app/components/ConnectorsShowcase";
+import { notFound } from "next/navigation";
 
 export default function CategoryPage({ params }) {
 
   const categorySlug = params.category;
 
-
-  // ===== 特殊展示页 =====
+  // ===== 特殊展示页优先返回 =====
   if (categorySlug === "inductors") {
     return <InductorsShowcase />;
   }
@@ -18,17 +17,18 @@ export default function CategoryPage({ params }) {
   if (categorySlug === "switch") {
     return <SwitchPage />;
   }
- if (categorySlug === "connectors") {
+
+  if (categorySlug === "connectors") {
     return <ConnectorsShowcase />;
   }
 
-  // ===== 普通分类页逻辑 =====
+  // ===== 普通分类页 =====
   const filteredProducts =
     categorySlug === "all"
       ? products
       : products.filter((p) => p.categorySlug === categorySlug);
 
-  if (filteredProducts.length === 0) {
+  if (!filteredProducts || filteredProducts.length === 0) {
     return notFound();
   }
 
