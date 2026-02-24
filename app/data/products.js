@@ -63,10 +63,10 @@ export const products = [
   ]
 },
   {
-  title: "ER Lithium Battery",
-  slug: "er-lithium-battery",
-  category: "Battery",
-  categorySlug: "battery",
+  title: "ER Lithium Batteries",
+  slug: "er-lithium-batteries",
+  category: "Batteries",
+  categorySlug: "batteries",
 
   description: "3.6V Li-SOCl₂ battery for smart meter and IoT applications.",
 
