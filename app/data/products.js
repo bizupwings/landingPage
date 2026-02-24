@@ -441,14 +441,29 @@ datasheetImages: [
   datasheetPdf: "/pdf/latch_relay.pdf"
 
   },
-  {
-  title: "Connectors",
-  slug: "connectors",
+{
+  title: "Terminal Blocks",
+  slug: "terminal-blocks",
   category: "Connectors",
   categorySlug: "connectors",
-  description: "Terminal blocks / Wire-to-board / Board-to-board / Industrial connectors",
-  specs: "Screw Type / Plug-in / PCB Mount / Barrier Type",
-  image: "connectors.jpg"
+  specs: "Screw Type / PCB Mount",
+  image: "terminal.jpg"
+},
+{
+  title: "Board-to-Board Connectors",
+  slug: "board-to-board",
+  category: "Connectors",
+  categorySlug: "connectors",
+  specs: "2.54mm / 1.27mm / High Density",
+  image: "board.jpg"
+},
+{
+  title: "Wire-to-Board Connectors",
+  slug: "wire-to-board",
+  category: "Connectors",
+  categorySlug: "connectors",
+  specs: "Crimp Type / IDC Type",
+  image: "wire.jpg"
 },
   {
     title: "Circuit Safety Devices",
