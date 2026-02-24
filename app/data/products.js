@@ -449,7 +449,7 @@ datasheetImages: [
   description: "Terminal blocks / Wire-to-board / Board-to-board / Industrial connectors",
   specs: "Screw Type / Plug-in / PCB Mount / Barrier Type",
   image: "connectors.jpg"
-}
+},
   {
     title: "Circuit Safety Devices",
     slug: "circuit-safety-devices",
