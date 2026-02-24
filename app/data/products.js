@@ -76,13 +76,7 @@ export const products = [
     "/products/battery/er-3.jpg"
   ],
 
-  technicalSpecs: [
-    { label: "Nominal Voltage", value: "3.6V" },
-    { label: "Capacity Range", value: "0.3Ah – 32Ah" },
-    { label: "Operating Temp", value: "-40°C to +85°C" },
-    { label: "Self Discharge", value: "≤1% per year" },
-    { label: "Certification", value: "UL / ATEX" }
-  ],
+
 
   datasheetPdf: "/pdf/er battery.pdf"
 },
