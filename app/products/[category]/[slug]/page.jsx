@@ -28,7 +28,7 @@ export default function ProductDetail({ params }) {
   if (slug === "tantalum-capacitor") {
     return <TantalumShowcase />;
   }
-if (product.slug === "connectors") {
+if (categorySlug === "connectors") {
   return <ConnectorsShowcase />;
 }
   if (!product) return notFound();
