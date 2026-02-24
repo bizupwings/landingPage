@@ -2,7 +2,6 @@ import { products } from "@/app/data/products";
 import Link from "next/link";
 import InductorsShowcase from "@/app/components/InductorsShowcase";
 import SwitchPage from "@/app/components/SwitchPage";
-import ConnectorsShowcase from "@/app/components/ConnectorsShowcase";
 import { notFound } from "next/navigation";
 
 export default function CategoryPage({ params }) {
@@ -18,9 +17,7 @@ export default function CategoryPage({ params }) {
     return <SwitchPage />;
   }
 
-  if (categorySlug === "connectors") {
-    return <ConnectorsShowcase />;
-  }
+
 
   // ===== 普通分类页 =====
   const filteredProducts =
