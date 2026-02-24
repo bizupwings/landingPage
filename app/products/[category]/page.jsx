@@ -2,10 +2,22 @@ import { products } from "@/app/data/products";
 import Link from "next/link";
 import InductorsShowcase from "@/app/components/InductorsShowcase";
 import SwitchPage from "@/app/components/SwitchPage";
+import { notFound } from "next/navigation";
 
+ 
 export default function CategoryPage({ params }) {
   const categorySlug = params.category;
+  
+ if (params.category === "connectors") {
+    return notFound();
+  }
 
+  return (
+    <div>
+      <h1>Products in {params.category}</h1>
+    </div>
+  );
+}
   // ✅ 特殊展示页：Inductors
   if (categorySlug === "inductors") {
     return <InductorsShowcase />;
