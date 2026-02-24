@@ -1,7 +1,7 @@
 import { products } from "@/app/data/products";
 import Link from "next/link";
 import InductorsShowcase from "@/app/components/InductorsShowcase";
-
+import SwitchPage from "@/app/components/SwitchPage";
 
 export default function CategoryPage({ params }) {
   const categorySlug = params.category;
@@ -10,7 +10,10 @@ export default function CategoryPage({ params }) {
   if (categorySlug === "inductors") {
     return <InductorsShowcase />;
   }
-
+  
+if (categorySlug === "switch") {
+  return <SwitchPage />;
+}
 
 
   // ===== 普通分类页逻辑 =====
