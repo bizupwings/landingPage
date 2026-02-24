@@ -158,6 +158,8 @@ const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
         </button>
       </nav>
 
+      <Link href="/products/connectors">Connectors</Link>
+
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-md absolute top-full left-0 w-full border-t">
