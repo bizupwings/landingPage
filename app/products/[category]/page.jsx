@@ -8,10 +8,6 @@ export default function CategoryPage({ params }) {
 
   const categorySlug = params.category;
 
-  // ===== 让 connectors 走独立页面 =====
-  if (categorySlug === "connectors") {
-    return notFound();
-  }
 
   // ===== 特殊展示页 =====
   if (categorySlug === "inductors") {
