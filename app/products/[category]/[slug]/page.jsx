@@ -6,6 +6,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import ImageCarousel from "@/app/components/ImageCarousel";
 import TantalumShowcase from "@/app/components/TantalumShowcase";
+import ConnectorsShowcase from "@/app/components/ConnectorsShowcase";
 
 export default function ProductDetail({ params }) {
   const { category: categorySlug, slug } = params;
