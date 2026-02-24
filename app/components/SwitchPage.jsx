@@ -24,7 +24,7 @@ export default function SwitchPage() {
           <ImageCarousel
             images={[
               "/products/push-1.jpg",
-              "/products/push-2.jpg",
+          
             ]}
             height={420}
           />
@@ -35,7 +35,7 @@ export default function SwitchPage() {
           <ImageCarousel
             images={[
               "/products/micro-1.jpg",
-              "/products/micro-2.jpg",
+           
             ]}
             height={420}
           />
@@ -46,7 +46,7 @@ export default function SwitchPage() {
           <ImageCarousel
             images={[
               "/products/toggle-1.jpg",
-              "/products/toggle-2.jpg",
+      
             ]}
             height={420}
           />
