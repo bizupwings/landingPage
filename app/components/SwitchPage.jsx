@@ -12,8 +12,8 @@ export default function SwitchPage() {
         return (
           <ImageCarousel
             images={[
-              "/products/rocker1.jpg",
-              "/products/rocker2.jpg",
+              "/products/rocker-1.jpg",
+              "/products/rocker-2.jpg",
             ]}
             height={420}
           />
@@ -23,8 +23,8 @@ export default function SwitchPage() {
         return (
           <ImageCarousel
             images={[
-              "/products/push1.jpg",
-              "/products/push2.jpg",
+              "/products/push-1.jpg",
+              "/products/push-2.jpg",
             ]}
             height={420}
           />
@@ -34,8 +34,8 @@ export default function SwitchPage() {
         return (
           <ImageCarousel
             images={[
-              "/products/micro1.jpg",
-              "/products/micro2.jpg",
+              "/products/micro-1.jpg",
+              "/products/micro-2.jpg",
             ]}
             height={420}
           />
@@ -45,8 +45,8 @@ export default function SwitchPage() {
         return (
           <ImageCarousel
             images={[
-              "/products/toggle1.jpg",
-              "/products/toggle2.jpg",
+              "/products/toggle-1.jpg",
+              "/products/toggle-2.jpg",
             ]}
             height={420}
           />
