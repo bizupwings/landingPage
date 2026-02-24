@@ -62,6 +62,30 @@ export const products = [
     }
   ]
 },
+  {
+  title: "ER Lithium Battery",
+  slug: "er-lithium-battery",
+  category: "Battery",
+  categorySlug: "battery",
+
+  description: "3.6V Li-SOCl₂ battery for smart meter and IoT applications.",
+
+  images: [
+    "/products/battery/er-1.jpg",
+    "/products/battery/er-2.jpg",
+    "/products/battery/er-3.jpg"
+  ],
+
+  technicalSpecs: [
+    { label: "Nominal Voltage", value: "3.6V" },
+    { label: "Capacity Range", value: "0.3Ah – 32Ah" },
+    { label: "Operating Temp", value: "-40°C to +85°C" },
+    { label: "Self Discharge", value: "≤1% per year" },
+    { label: "Certification", value: "UL / ATEX" }
+  ],
+
+  datasheetPdf: "/pdf/er battery.pdf"
+},
  {
   title: "AL Capacitor (Electrolytic)",
   slug: "al",  
