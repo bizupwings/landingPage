@@ -93,7 +93,7 @@ export default function ConnectorsShowcase() {
         {/* PDF 下载 */}
         <div className="text-center mt-16">
           <a
-            href="/pdf/connector1.pdf"
+            href="/pdf/connector 1.pdf"
             target="_blank"
             className="px-8 py-3 bg-black text-white rounded-lg inline-block hover:bg-gray-800 transition"
           >
