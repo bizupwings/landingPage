@@ -17,7 +17,7 @@ export default function TantalumShowcase() {
           {/* Image */}
           <div>
             <img
-              src="/products/tantalum.jpg"
+              src="/products/tantalum .jpg"
               alt="Tantalum Capacitor"
               className="rounded-lg shadow bg-white w-full"
             />
