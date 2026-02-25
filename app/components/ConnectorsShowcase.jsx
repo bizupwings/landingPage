@@ -3,100 +3,99 @@
 import { useState } from "react";
 import ImageCarousel from "@/app/components/ImageCarousel";
 
+const connectorsData = [
+  {
+    id: "plugable",
+    button: "Plugable",
+    title: "Plugable Terminal Block",
+    description:
+      "High reliability pluggable terminal blocks for industrial control, power systems and automation equipment.",
+    images: [
+      "/products/connectors/plugable1.jpg",
+      "/products/connectors/plugable2.jpg",
+    ],
+  },
+  {
+    id: "screw",
+    button: "Screw",
+    title: "Screw Terminal Block",
+    description:
+      "Classic screw type terminal blocks with stable connection performance and long service life.",
+    images: [
+      "/products/connectors/screw1.jpg",
+      "/products/connectors/screw2.jpg",
+    ],
+  },
+  {
+    id: "barrier",
+    button: "Barrier",
+    title: "Barrier Terminal Block",
+    description:
+      "Barrier type terminal blocks designed for heavy current applications with enhanced insulation performance.",
+    images: [
+      "/products/connectors/barrier1.jpg",
+      "/products/connectors/barrier2.jpg",
+    ],
+  },
+];
+
 export default function ConnectorsShowcase() {
   const [activeTab, setActiveTab] = useState("plugable");
 
-  const renderContent = () => {
-    switch (activeTab) {
-      case "plugable":
-        return (
-          <>
-            <h2 className="text-2xl font-bold mb-4">
-              Plugable Terminal Block
-            </h2>
-            <p className="mb-6 text-gray-600">
-              High reliability pluggable terminal blocks for industrial control,
-              power systems and automation equipment.
-            </p>
-            <ImageCarousel
-              images={[
-                "/products/connectors/plugable1.jpg",
-                "/products/connectors/plugable2.jpg",
-              ]}
-              height={420}
-            />
-          </>
-        );
-
-      case "screw":
-        return (
-          <>
-            <h2 className="text-2xl font-bold mb-4">
-              Screw Terminal Block
-            </h2>
-            <p className="mb-6 text-gray-600">
-              Classic screw type terminal blocks with stable connection performance.
-            </p>
-            <ImageCarousel
-              images={[
-                "/products/connectors/screw1.jpg",
-                "/products/connectors/screw2.jpg",
-              ]}
-              height={420}
-            />
-          </>
-        );
-
-      case "barrier":
-        return (
-          <>
-            <h2 className="text-2xl font-bold mb-4">
-              Barrier Terminal Block
-            </h2>
-            <p className="mb-6 text-gray-600">
-              Designed for heavy current applications with enhanced insulation.
-            </p>
-            <ImageCarousel
-              images={[
-                "/products/connectors/barrier1.jpg",
-                "/products/connectors/barrier2.jpg",
-              ]}
-              height={420}
-            />
-          </>
-        );
-    }
-  };
+  const activeProduct = connectorsData.find(
+    (item) => item.id === activeTab
+  );
 
   return (
     <section className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-6">
 
-        <h1 className="text-4xl font-bold mb-10 text-center">
+        {/* 标题 */}
+        <h1 className="text-4xl font-bold mb-12 text-center">
           CONNECTOR SERIES
         </h1>
 
-        <div className="flex justify-center gap-4 mb-12">
-          <button onClick={() => setActiveTab("plugable")} className="px-6 py-2 bg-blue-600 text-white rounded">
-            Plugable
-          </button>
-          <button onClick={() => setActiveTab("screw")} className="px-6 py-2 bg-blue-600 text-white rounded">
-            Screw
-          </button>
-          <button onClick={() => setActiveTab("barrier")} className="px-6 py-2 bg-blue-600 text-white rounded">
-            Barrier
-          </button>
+        {/* 按钮切换 */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {connectorsData.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => setActiveTab(item.id)}
+              className={`px-6 py-2 rounded transition ${
+                activeTab === item.id
+                  ? "bg-blue-600 text-white"
+                  : "bg-white border border-gray-300"
+              }`}
+            >
+              {item.button}
+            </button>
+          ))}
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {renderContent()}
+        {/* 内容区域 */}
+        <div className="max-w-4xl mx-auto text-center">
+
+          <h2 className="text-2xl font-bold mb-4">
+            {activeProduct.title}
+          </h2>
+
+          <p className="mb-8 text-gray-600">
+            {activeProduct.description}
+          </p>
+
+          <ImageCarousel
+            images={activeProduct.images}
+            height={420}
+          />
+
         </div>
 
+        {/* PDF 下载 */}
         <div className="text-center mt-16">
           <a
             href="/pdf/connector1.pdf"
             target="_blank"
-            className="px-8 py-3 bg-black text-white rounded-lg inline-block"
+            className="px-8 py-3 bg-black text-white rounded-lg inline-block hover:bg-gray-800 transition"
           >
             Download Full Catalog (PDF)
           </a>
