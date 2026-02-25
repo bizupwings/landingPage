@@ -45,7 +45,7 @@ export const products = [
   categorySlug: "batteries",
   description: "Lithium manganese dioxide CR coin cell batteries.",
   specs: "CR2032 / CR2025 / CR2016 / 30+ Models",
-  image: "cr-battery.jpg",
+  image: "cr2032.jpg",
 
   datasheetPdfs: [
     {
@@ -71,9 +71,7 @@ export const products = [
   description: "3.6V Li-SOCl₂ battery for smart meter and IoT applications.",
 
   images: [
-    "/products/battery/er-1.jpg",
-    "/products/battery/er-2.jpg",
-    "/products/battery/er-3.jpg"
+    "/products/er-1.jpg",
   ],
 
 
