@@ -5,9 +5,9 @@ import Link from "next/link";
 import { products } from "@/app/data/products";
 
 export default function Products({ filteredProducts = [], selfRender = false }) {
-  const displayProducts = selfRender
-    ? products.slice(0, 10)
-    : filteredProducts;
+ const displayProducts = selfRender
+  ? products.filter((p) => p.showOnHome)
+  : filteredProducts;
 
 return (
   <section className="py-6 bg-gray-50">
