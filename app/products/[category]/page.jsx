@@ -3,7 +3,7 @@ import Link from "next/link";
 import InductorsShowcase from "@/app/components/InductorsShowcase";
 import SwitchPage from "@/app/components/SwitchPage";
 import { notFound } from "next/navigation";
-
+import ConnectorsShowcase from "@/app/components/ConnectorsShowcase";
 export default function CategoryPage({ params }) {
 
   const categorySlug = params.category;
@@ -16,7 +16,9 @@ console.log("Current category:", categorySlug);
   if (categorySlug === "switch") {
     return <SwitchPage />;
   }
-
+if (categorySlug === "connectors") {
+  return <ConnectorsShowcase />;
+}
 
 
   // ===== 普通分类页 =====
