@@ -442,76 +442,7 @@ datasheetImages: [
   datasheetPdf: "/pdf/latch_relay.pdf"
 
   },
-// ===== CONNECTORS =====
 
-{
-  title: "Plugable Terminal Block",
-  slug: "plugable-terminal-block",
-  category: "Connectors",
-  categorySlug: "connectors",
-  description:
-    "High reliability pluggable terminal blocks for industrial control, power systems and automation equipment.",
-  specs: "Industrial / Automation / High Stability",
-  image: "plugable1.jpg",
-
-  images: [
-    "/products/connectors/plugable1.jpg",
-    "/products/connectors/plugable2.jpg"
-  ],
-
-  datasheetPdfs: [
-    {
-      label: "Connector PDF",
-      url: "/pdf/connector1.pdf"
-    }
-  ]
-},
-
-{
-  title: "Screw Terminal Block",
-  slug: "screw-terminal-block",
-  category: "Connectors",
-  categorySlug: "connectors",
-  description:
-    "Classic screw type terminal blocks with stable connection performance and long service life.",
-  specs: "Screw Type / PCB Mount / Reliable",
-  image: "screw1.jpg",
-
-  images: [
-    "/products/connectors/screw1.jpg",
-    "/products/connectors/screw2.jpg"
-  ],
-
-  datasheetPdfs: [
-    {
-      label: "Connector PDF",
-      url: "/pdf/connector1.pdf"
-    }
-  ]
-},
-
-{
-  title: "Barrier Terminal Block",
-  slug: "barrier-terminal-block",
-  category: "Connectors",
-  categorySlug: "connectors",
-  description:
-    "Barrier type terminal blocks designed for heavy current applications with enhanced insulation performance.",
-  specs: "Heavy Current / High Insulation / Durable",
-  image: "barrier1.jpg",
-
-  images: [
-    "/products/connectors/barrier1.jpg",
-    "/products/connectors/barrier2.jpg"
-  ],
-
-  datasheetPdfs: [
-    {
-      label: "Connector PDF",
-      url: "/pdf/connector1.pdf"
-    }
-  ]
-},
 
   {
     title: "Circuit Safety Devices",
