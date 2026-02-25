@@ -9,6 +9,10 @@ export default function CategoryPage({ params }) {
   const categorySlug = params.category;
 console.log("Current category:", categorySlug);
   // ===== 特殊展示页优先返回 =====
+  if (categorySlug === "connectors") {
+  return <ConnectorsShowcase />;
+}
+
   if (categorySlug === "inductors") {
     return <InductorsShowcase />;
   }
@@ -16,9 +20,6 @@ console.log("Current category:", categorySlug);
   if (categorySlug === "switch") {
     return <SwitchPage />;
   }
-if (categorySlug === "connectors") {
-  return <ConnectorsShowcase />;
-}
 
 
   // ===== 普通分类页 =====
