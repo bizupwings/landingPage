@@ -23,12 +23,11 @@ const categories = [
   "Transformers",
   "Bare PCB",
   "Relays",
-  "Connector",
+  "Connectors", // ✅ 改成复数
   "Circuit Safety Devices",
   "Switch",
-  "Meter",  
+  "Meter",
   "Inductors",
-  
 ];
 
 /* ============================= */
@@ -47,10 +46,10 @@ const categorySlugMap: Record<string, string> = {
   Transformers: "transformers",
   "Bare PCB": "bare-pcb",
   Relays: "relays",
-  "Connector": "connector",
+  Connectors: "connectors", // ✅ 改成复数
   "Circuit Safety Devices": "circuit-safety-devices",
   Switch: "switch",
-   Meter: "meter",  
+  Meter: "meter",
   Inductors: "inductors",
 };
 
@@ -59,7 +58,7 @@ export default function Header() {
   const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
+  const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -77,13 +76,13 @@ const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
 
   return (
     <header className="w-full bg-white shadow-md sticky top-0 z-50">
-      
+
       {/* 顶部联系栏 */}
       <div className="bg-gray-800 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex gap-4 text-sm">
             <span>📞 India: +91 8178484331</span>
-            <span>📞 China: (021) 69902124</span>
+            <span>📞 China: +86 19821571697</span>
           </div>
         </div>
       </div>
@@ -104,6 +103,7 @@ const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 text-gray-700">
+
           <Link href="/" className="hover:text-blue-600">
             Home
           </Link>
@@ -147,6 +147,7 @@ const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
           <Link href="/contact" className="hover:text-blue-600">
             Contact Us
           </Link>
+
         </div>
 
         {/* Mobile Button */}
@@ -158,12 +159,11 @@ const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
         </button>
       </nav>
 
-      <Link href="/products/connectors">Connectors</Link>
-
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-md absolute top-full left-0 w-full border-t">
           <ul className="flex flex-col text-gray-700 text-center py-4 space-y-4">
+
             <li>
               <Link href="/" onClick={() => setIsOpen(false)}>
                 Home
@@ -207,10 +207,10 @@ const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
                 Contact Us
               </Link>
             </li>
+
           </ul>
         </div>
       )}
     </header>
   );
 }
-
