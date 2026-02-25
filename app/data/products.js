@@ -272,7 +272,7 @@ showOnHome: true,
   categorySlug: "resistors",
   specs: "CFR, MFR, Wire Wound, SMD, Fusible",
   image: "resistor.jpg",
-
+  showOnHome: true,
   description:
     "Comprehensive range of chip and DIP resistors including thick film, thin film, metal film, wire wound and automotive grade resistors.",
 
@@ -292,7 +292,7 @@ showOnHome: true,
   ],
 
   datasheetPdf: "/pdf/resistor_hkr.pdf"
-showOnHome: true,
+
 
   },
   {
