@@ -58,7 +58,7 @@ export const products = [
     },
     {
       label: "Tech Introduction",
-      url: "/pdf/CR-Tech-Introduction.pdf"
+      url: "/pdf/CR-Tech-Introduction.pptx"
     }
   ]
 },
