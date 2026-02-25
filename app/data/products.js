@@ -70,7 +70,7 @@ export const products = [
 
   description: "3.6V Li-SOCl₂ battery for smart meter and IoT applications.",
 
-  images: "er-1.jpg",
+  images: "/products/er-1.jpg",
 
 
 
