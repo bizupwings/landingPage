@@ -31,10 +31,10 @@ export default function ContactUs() {
             <div className="flex gap-2 flex-col">
                 <div className="flex gap-1 items-center">
                     <MapPin className="text-blue-600" />
-                    <h4 className="font-semibold">SHANGAI</h4>
+                    <h4 className="font-semibold">SHANGHAI</h4>
                 </div>
                 <div>
-                    <p>Room 402, No.46, Lane 606, Pingcheng Rd, Jiading District, Shangai</p>
+                    <p>Room 402, No.46, Lane 606, Pingcheng Rd, Jiading District, Shanghai</p>
                 </div>
             </div>
             <div className="flex gap-2 flex-col">
