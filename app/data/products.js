@@ -292,7 +292,7 @@ showOnHome: true,
   ],
 
   datasheetPdf: "/pdf/resistor_hkr.pdf"
-
+showOnHome: true,
 
   },
   {
@@ -544,7 +544,7 @@ showOnHome: true,
   slug: "inductors",
   category: "Inductors",
   categorySlug: "inductors",
-  showOnHome: true,
+  
 }
 
 ];
