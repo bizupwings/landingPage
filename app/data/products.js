@@ -70,6 +70,7 @@ export const products = [
   slug: "er-lithium-batteries",
   category: "Batteries",
   categorySlug: "batteries",
+showOnHome: true,
 
   description: "3.6V Li-SOCl₂ battery for smart meter and IoT applications.",
 
@@ -155,7 +156,7 @@ showOnHome: true,
   slug: "ceramic-disc-hvcap",
   category: "Capacitors",
   categorySlug: "capacitors",
-
+showOnHome: true,
   specs: "High Voltage Ceramic Capacitors",
 
   description:
@@ -302,7 +303,7 @@ showOnHome: true,
   categorySlug: "liquid-crystal-display-lcd",
   description: "Industrial and commercial grade intelligent LCD modules based on T5L ASIC.",
   specs: "IPS / TN / Touch Screen / DGUS II Platform",
-
+ showOnHome: true,
   models: [
     {
       name: "DMG10600C101_03WTC",
@@ -493,7 +494,7 @@ showOnHome: true,
   category: "Meter",
   categorySlug: "meter",
   image: "energy.jpg",
-
+  showOnHome: true,
   description: "Single & three phase electronic meter.",
 
   features: [
@@ -515,8 +516,8 @@ showOnHome: true,
 },
 
 {
-  title: "IoT Metering Solution",
-  slug: "iot-metering-solution",
+ title: "IoT Meter Solution / Gas Meter",
+ slug: "iot-meter-solution-gas-meter",
   category: "Solutions",
   categorySlug: "meter",
   image: "iot.jpg",
