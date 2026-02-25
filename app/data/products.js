@@ -96,7 +96,7 @@ export const products = [
     "Industrial grade quality"
   ],
 
-  image: "al-capacitor.jpg",   
+  image: "al capacitors.jpg",   
 
   datasheetPdf: "/pdf/al-profile.pdf"   
 },
@@ -189,7 +189,7 @@ export const products = [
   description:
     "Champion X2 film capacitors for EMI suppression and safety applications.",
 
-  image: "capacitor.jpg",
+  image: "x2.jpg",
 
   features: [
     "X2 safety certified",
@@ -215,7 +215,7 @@ export const products = [
   slug: "super-capacitor",
   category: "Capacitors",
   categorySlug: "capacitors",
-  image: "super-capacitor.jpg",
+  image: "super.jpg",
 
   description: "Super Capacitor Series – High Capacity / Low ESR",
 
