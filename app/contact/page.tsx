@@ -53,7 +53,7 @@ export default function ContactUs() {
             <Phone className="text-green-600" />
             <div>
               <h4 className="font-semibold">Call Us</h4>
-              <p>China: (021) 69902124</p>
+              <p>China: +86 15317936268</p>
               <p>Ind: +91 8178484331</p>
             </div>
           </div>
