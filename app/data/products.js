@@ -18,6 +18,7 @@ export const products = [
     colors: ["Red", "Green", "Yellow", "Amber", "Blue", "White"],
     applications: ["Traffic Signals", "Railway Signals", "Indoor & Outdoor Lighting"],
     image: "high_bright_led.jpeg",
+    showOnHome: true,
   },
   {
     title: "Power LED",
@@ -46,6 +47,8 @@ export const products = [
   description: "Lithium manganese dioxide CR coin cell batteries.",
   specs: "CR2032 / CR2025 / CR2016 / 30+ Models",
   image: "cr2032.jpg",
+     
+    showOnHome: true,
 
   datasheetPdfs: [
     {
@@ -84,7 +87,7 @@ export const products = [
   slug: "al",  
   category: "Capacitors",
   categorySlug: "capacitors",
-
+showOnHome: true,
   description:
     "Aluminium electrolytic capacitors for industrial and general applications.",
 
@@ -249,7 +252,7 @@ export const products = [
       value: "-20% ~ +80%"
     }
   ],
-
+ showOnHome: true,
   datasheetPdf: "/pdf/super capacitor.pdf",
 },
   
@@ -409,6 +412,7 @@ datasheetImages: [
     categorySlug: "bare-pcb",
     specs: "2 to 14 Layers (Single/Double Side)",
     image: "pcb.jpg",
+    showOnHome: true,
   },
   {
   title: "Relays",
@@ -417,7 +421,7 @@ datasheetImages: [
   categorySlug: "relays",
   specs: "Telecom, Automotive, Reed Relays",
   image: "relays.jpg",
-    
+    showOnHome: true,
 
   description:
     "Magnetic latching relays (SH31A / SH31E series) with low power consumption and high switching capability.",
@@ -460,7 +464,7 @@ datasheetImages: [
   category: "Meter",
   categorySlug: "meter",
   image: "water.jpg",
-
+showOnHome: true,
   description: "High accuracy ultrasonic water meter.",
 
   features: [
@@ -540,6 +544,7 @@ datasheetImages: [
   slug: "inductors",
   category: "Inductors",
   categorySlug: "inductors",
+  showOnHome: true,
 }
 
 ];
