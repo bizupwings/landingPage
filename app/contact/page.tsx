@@ -34,7 +34,7 @@ export default function ContactUs() {
                     <h4 className="font-semibold">SHANGHAI</h4>
                 </div>
                 <div>
-                    <p>Room 402, No.46, Lane 606, Pingcheng Rd, Jiading District, Shanghai</p>
+                    <p>Room 102, No.196, Lane 1868, HuYi Highway, Jiading District, Shanghai</p>
                 </div>
             </div>
             <div className="flex gap-2 flex-col">
