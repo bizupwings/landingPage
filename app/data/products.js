@@ -458,7 +458,7 @@ datasheetImages: [
   slug: "ultrasonic-water-meter",
   category: "Meter",
   categorySlug: "meter",
-  image: "water-meter.jpg",
+  image: "water.jpg",
 
   description: "High accuracy ultrasonic water meter.",
 
@@ -487,7 +487,7 @@ datasheetImages: [
   slug: "electronic-energy-meter",
   category: "Meter",
   categorySlug: "meter",
-  image: "energy-meter.jpg",
+  image: "energy.jpg",
 
   description: "Single & three phase electronic meter.",
 
@@ -514,7 +514,7 @@ datasheetImages: [
   slug: "iot-metering-solution",
   category: "Solutions",
   categorySlug: "meter",
-  image: "iot-meter.jpg",
+  image: "iot.jpg",
 
   description: "Smart energy management platform.",
 
