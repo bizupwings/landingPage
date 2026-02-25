@@ -82,7 +82,7 @@ export default function Header() {
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex gap-4 text-sm">
             <span>📞 India: +91 8178484331</span>
-            <span>📞 China: +86 19821571697</span>
+            <span>📞 China: +86 15317936268</span>
           </div>
         </div>
       </div>
