@@ -11,8 +11,8 @@ const connectorsData = [
     description:
       "High reliability pluggable terminal blocks for industrial control, power systems and automation equipment.",
     images: [
-      "/products/connectors/plugable1.jpg",
-      "/products/connectors/plugable2.jpg",
+      "/products/plugable1.jpg",
+      "/products/plugable2.jpg",
     ],
   },
   {
@@ -22,8 +22,8 @@ const connectorsData = [
     description:
       "Classic screw type terminal blocks with stable connection performance and long service life.",
     images: [
-      "/products/connectors/screw1.jpg",
-      "/products/connectors/screw2.jpg",
+      "/products/screw1.jpg",
+      "/products/screw2.jpg",
     ],
   },
   {
@@ -33,8 +33,8 @@ const connectorsData = [
     description:
       "Barrier type terminal blocks designed for heavy current applications with enhanced insulation performance.",
     images: [
-      "/products/connectors/barrier1.jpg",
-      "/products/connectors/barrier2.jpg",
+      "/products/barrier1.jpg",
+      "/products/barrier2.jpg",
     ],
   },
 ];
