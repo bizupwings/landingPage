@@ -3,15 +3,12 @@ import Link from "next/link";
 import InductorsShowcase from "@/app/components/InductorsShowcase";
 import SwitchPage from "@/app/components/SwitchPage";
 import { notFound } from "next/navigation";
-import ConnectorsShowcase from "@/app/components/ConnectorsShowcase";
+
 export default function CategoryPage({ params }) {
 
   const categorySlug = params.category;
 console.log("Current category:", categorySlug);
   // ===== 特殊展示页优先返回 =====
-  if (categorySlug === "connectors") {
-  return <ConnectorsShowcase />;
-}
 
   if (categorySlug === "inductors") {
     return <InductorsShowcase />;
