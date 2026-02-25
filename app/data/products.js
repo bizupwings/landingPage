@@ -142,7 +142,7 @@ export const products = [
     "Long operational life",
     "Automotive grade optional"
   ],
-  image: "capacitor.jpg"
+  image: "tantalum.jpg"
 },
 
 {
@@ -157,7 +157,7 @@ export const products = [
   description:
     "HVCAP ceramic disc capacitors designed for high voltage applications including power supply, lighting and industrial equipment.",
 
-  image: "capacitor.jpg",
+  image: "ceramic.jpg",
 
   features: [
     "High voltage rating",
