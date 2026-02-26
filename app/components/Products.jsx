@@ -21,7 +21,7 @@ return (
           {displayProducts.map((product, index) => (
             <Link
               key={index}
-              href={`/products/${product.category.toLowerCase()}/${product.slug}`}
+              href={`/products/${product.categorySlug}/${product.slug}`}
             >
               <div className="bg-white rounded-lg shadow-lg p-5 transition hover:shadow-xl cursor-pointer">
                 <div className="relative w-full h-48">
